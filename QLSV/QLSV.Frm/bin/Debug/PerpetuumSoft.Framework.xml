@@ -1,0 +1,2710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>PerpetuumSoft.Framework</name>
+  </assembly>
+  <members>
+    <member name="T:PerpetuumSoft.Framework.Atom">
+      <summary>Represents the base class for objects that have immutable behaviour.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Atom.GetImmutableOrNull(PerpetuumSoft.Framework.Atom)">
+      <summary>Returns the immutable version of the given object or null, if the given object is null.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Atom.MakeImmutable">
+      <summary>Makes this class as immutable.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Atom.GetImmutableVersion">
+      <summary>Returns this object if it is immutable or immutable clone of it.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Atom.CheckMutable">
+      <summary>Throws an exception if the object is immutable. Exception has InvalidOperationException type.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Atom.IsImmutable">
+      <summary>Gets whether this object is immutable.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Atom.Clone">
+      <summary>Returns the copy of this object.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ArrowShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition">
+      <summary>Definitions for barcode label position and alignment.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition.BottomCenter">
+      <summary>Bottom-center.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition.BottomLeft">
+      <summary>Bottom-left.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition.TopLeft">
+      <summary>Top-left.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition.TopRight">
+      <summary>Top-right.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition.BottomRight">
+      <summary>Bottom-right.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeLabelPosition.TopCenter">
+      <summary>Top-center.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.BarCodePainter">
+      <summary>Draws a barcode.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.BarPoint">
+      <summary>Gets or sets bar point.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BarCodePainter.DrawBarCode(System.Drawing.Graphics,System.Drawing.RectangleF)">
+      <summary>Draws the barcode based on the specified graphics parameters in the specified rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.ShowCheckDigit">
+      <summary>Gets or sets whether the check sum should be drawn in the label.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.Pdf417Settings">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Pdf417Settings" /> object that represents barcode settings.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.TextColor">
+      <summary>Gets or sets the text label color.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.CodeType">
+      <summary>Gets or sets the type of barcode.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.ShowLabel">
+      <summary>Gets or sets whether the label should be drawn for the current instance of BarCodePainter.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BarCodePainter.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.BarCodePainter" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.CheckSumm">
+      <summary>Gets or sets whether a check sum should be calculated for the current instance of BarCodePainter.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.BarRatio">
+      <summary>Gets or sets bar ratio for barcode, default value 2.0f.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodePainter.DefaultFont">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.Modul">
+      <summary>Gets or sets module, values from 1 to 49 are allowed.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.Code">
+      <summary>Gets or set the value coded in the BarCodePainter object.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.BackColor">
+      <summary>Gets or sets the color of spaces between the bars (the background color).</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.Font">
+      <summary>Gets or sets the barcode label font.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.BarColor">
+      <summary>Gets or sets the bars color (the foreground color).</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BarCodePainter.LabelPosition">
+      <summary>Label position for the current instance of BarCodePainter.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.BarCodeType">
+      <summary>Available barcode types.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeEAN8">
+      <summary>Code EAN8.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.PDF417Compact">
+      <summary>Code PDF417Compact.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeUPC_E0">
+      <summary>Code UPC_E0.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeJAN13">
+      <summary>Code JAN13.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeCodabar">
+      <summary>Code Codabar.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeEAN13">
+      <summary>Code EAN13.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code39Extended">
+      <summary>Code 39 Extended.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeUPC_Supp5">
+      <summary>Code UPC_Supp5.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeUPC_Supp2">
+      <summary>Code UPC_Supp2.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code_2_5_industrial">
+      <summary>Code25 industrial.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeEAN128B">
+      <summary>Code EAN128B.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeEAN128C">
+      <summary>Code EAN128C.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeEAN128A">
+      <summary>Code EAN128A.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodePostNet">
+      <summary>Code PostNet.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeUPC_E1">
+      <summary>Code UPC_E1.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code_2_5_matrix">
+      <summary>Code 25 matrix.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code_2_5_interleaved">
+      <summary>Code 25 interleaved.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code128C">
+      <summary>Code 128C.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeMSI">
+      <summary>Code MSI.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeUPC_A">
+      <summary>Code UPC_A.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code128B">
+      <summary>Code 128B.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code39">
+      <summary>Code 39.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.PDF417">
+      <summary>Code PDF417.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code128A">
+      <summary>Code 128A.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code93">
+      <summary>Code 93.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Japan_Postal">
+      <summary>Japan postal bar code.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.CodeJAN8">
+      <summary>Code JAN8.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.BarCodeType.Code93Extended">
+      <summary>Code 93 Extended.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Border">
+      <summary>Defines the kind of a border around an element.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ReseBottomLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.LeftLine">
+      <summary>Gets or sets the left line of the border.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.#ctor(PerpetuumSoft.Framework.Drawing.BorderLine)">
+      <summary>Creates a border with a uniform style of line on all sides.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ShouldSerializeBottomLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ResetRightLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.#ctor">
+      <summary>Default constructor.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.AllLinesSameStyle">
+      <summary>Determines whether the border has uniform lines. Returns true if all border lines are of the same style.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.RightLine">
+      <summary>Gets or sets the right line of the border.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.Clone">
+      <summary>Creates a copy of the Border.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ResetAll">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.#ctor(PerpetuumSoft.Framework.Drawing.BorderLine,PerpetuumSoft.Framework.Drawing.BorderLine,PerpetuumSoft.Framework.Drawing.BorderLine,PerpetuumSoft.Framework.Drawing.BorderLine)">
+      <summary>Creates a border with a specified lines style.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ShouldSerializeAll">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.DrawBorder(System.Drawing.Graphics,System.Drawing.RectangleF,PerpetuumSoft.Framework.Drawing.Unit)">
+      <summary>Draws the border.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.BottomLine">
+      <summary>Gets or sets the bottom line of the border.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.IsEmpty">
+      <summary>Determines whether it's necessary to draw the border. Returns true if none of the borders is specified.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ReseLeftLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.DrawBorder(System.Drawing.Graphics,System.Drawing.RectangleF)">
+      <summary>Draws the border.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ShouldSerializeTopLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ResetTopLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ShouldSerializeLeftLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.All">
+      <summary>Allows to set a uniform line style for all sides at once.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Border.TopLine">
+      <summary>Gets or sets the upper line of the border.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Border.ShouldSerializeRightLine">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.BorderLine">
+      <summary>Defines parameters for line drawing: style, color, and width.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BorderLine.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BorderLine.CreatePen">
+      <summary>Creates a Pen object appropriate to the line parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BorderLine.Style">
+      <summary>Gets or sets line style.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BorderLine.#ctor(PerpetuumSoft.Framework.Drawing.LineStyle,System.Drawing.Color,System.Double)">
+      <summary>Initializes a new instance of BorderLine.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BorderLine.CreatePen(PerpetuumSoft.Framework.Drawing.Unit)">
+      <summary>Creates a Pen object appropriate to the line parameters using the specified output device resolution.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BorderLine.Width">
+      <summary>Gets or sets line width.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BorderLine.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.BorderLine.Color">
+      <summary>Gets or sets line color.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.BorderLine.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ConicalFill">
+      <summary>Represent the conical gradient fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ConicalFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.ConicalFill.TotalAngle">
+      <summary>Gets or sets the total angle of use of the colors spectrum set in the Colors property.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.ConicalFill.CenterColor">
+      <summary>Gets or sets the Color in the center of the cone.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.ConicalFill.StartAngle">
+      <summary>Gets or sets the initial angle of use of the colors spectrum set in the Colors property.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ConicalFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ConicalFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.ConicalFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ConicalFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ConicalFill.Clone">
+      <summary>Implements <see cref="M:System.ICloneable.Clone" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.ConicalFill.Delta">
+      <summary>Gets or sets the value which assigns the offset radius of the polar coordinates.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.CrossShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.BorderEditorControl">
+      <summary>Border editor control</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.BorderEditorControl.Dispose(System.Boolean)">
+      <exclude>
+      </exclude>
+      <summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.BorderEditorControl.OnLoad(System.EventArgs)">
+      <summary>Raises the Load event.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.BorderEditorControl.Border">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Border" /></summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.BorderEditorControl.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.BorderEditorControl" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.BorderForm">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.ExamplePanel">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs">
+      <summary>Contains information on the fill</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs.Fill">
+      <summary>Gets <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /></summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs.#ctor(PerpetuumSoft.Framework.Drawing.Fill)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FillChangedEventHandler">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl">
+      <summary>Fill editor control</summary>
+    </member>
+    <member name="E:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.EndEdit">
+      <summary>Occurs when editing is complete</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.#ctor(PerpetuumSoft.Framework.Drawing.Fill)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.Fill">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /></summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.Dispose(System.Boolean)">
+      <exclude>
+      </exclude>
+      <summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.OnEndEdit(System.ComponentModel.CancelEventArgs)">
+      <summary>Raises the OnEndEdit event.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.OnValueChanged(PerpetuumSoft.Framework.Drawing.Design.FillChangedEventArgs)">
+      <summary>Raises the OnValueChanged event.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.OnLoad(System.EventArgs)">
+      <summary>Raises the Load event.</summary>
+    </member>
+    <member name="E:PerpetuumSoft.Framework.Drawing.Design.FillEditorControl.ValueChanged">
+      <summary>Occurs when the Fill property changes.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FillEditorForm">
+      <summary>Fill editing form</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorForm.OnLoad(System.EventArgs)">
+      <summary>Raises the Load event.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.FillEditorForm.Fill">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /></summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorForm.Dispose(System.Boolean)">
+      <exclude>
+      </exclude>
+      <summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.FillEditorForm.#ctor(PerpetuumSoft.Framework.Drawing.Fill)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.FillEditorForm" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FillTypeConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FontDescriptorConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.FontDescriptorFamilyNameConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.IFillEditorControl">
+      <summary>Provides methods for the Fill editing</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.IFillEditorControl.SetFill(PerpetuumSoft.Framework.Drawing.Fill)">
+      <summary>Sets the Fill property</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.IFillEditorControl.GetFill">
+      <summary>Gets the Fill property</summary>
+    </member>
+    <member name="E:PerpetuumSoft.Framework.Drawing.Design.IFillEditorControl.ValueChanged">
+      <summary>Occurs when the Fill property changes.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.IMeasureUnitService">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.MarginsEditorControl">
+      <summary>Margins editor control</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.MarginsEditorControl.Unit">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Unit" /></summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.MarginsEditorControl.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.MarginsEditorControl" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.MarginsEditorControl.Dispose(System.Boolean)">
+      <exclude>
+      </exclude>
+      <summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.MarginsEditorControl.Margins">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Margins" /></summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.MeasuredDoubleConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.MeasureUnitService">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.SimpleFillEditorControl">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl">
+      <summary>Stroke editor control</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.Dispose(System.Boolean)">
+      <exclude>
+      </exclude>
+      <summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.Stroke">
+      <summary>Gets or sets <see cref="T:PerpetuumSoft.Framework.Drawing.Stroke" /></summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.OnLoad(System.EventArgs)">
+      <summary>Raises the Load event.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.OnValueChanged(System.EventArgs)">
+      <summary>Raises the OnValueChanged event.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.#ctor(PerpetuumSoft.Framework.Drawing.Stroke)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl" /> class.</summary>
+    </member>
+    <member name="E:PerpetuumSoft.Framework.Drawing.Design.StrokeEditorControl.ValueChanged">
+      <summary>Occurs when the Fill property changes.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Design.VectorConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.DiamondShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Direction">
+      <summary>Enumrates vector directions.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.Direction.Y">
+      <summary>Horizontal direction.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.Direction.X">
+      <summary>Vertical direction.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.EllipseShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.EmptyFill">
+      <summary>Represents a null fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyFill.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyFill.GetReplaceColor">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.EmptyFill" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.EmptyStroke">
+      <summary>Represents a null stroke.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyStroke.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyStroke.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.EmptyStroke" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyStroke.CreatePen">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Stroke.CreatePen" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyStroke.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.EmptyStroke.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.EmptyStroke.Width">
+      <summary>Overridden. See <see cref="P:PerpetuumSoft.Framework.Drawing.Stroke.Width" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Fill">
+      <summary>Represents base abstract class for all fill types.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Fill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Fill.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Fill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Fill.Empty">
+      <summary>Defines a "null"-fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Returns a Brush object for the choosen fill type.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor">
+      <summary>Returns the substitute fill color for formats with limited color functionality.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.FontDescriptor">
+      <summary>Describes the <see cref="T:System.Drawing.Font" /> object.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.FontDescriptor.Bold">
+      <summary>Gets or sets the value that indicates whether font object is bold.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.GetFont">
+      <summary>Returns the <see cref="T:System.Drawing.Font" /> object with setted parameters.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.#ctor(PerpetuumSoft.Framework.Drawing.FontDescriptor)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.FontDescriptor" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.#ctor">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.FontDescriptor" /> class with default parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.FontDescriptor.FamilyName">
+      <summary>Gets or sets a family name of font.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.#ctor(System.String,System.Single)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.FontDescriptor" /> class by FontFamily name and size.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.FontDescriptor.Underline">
+      <summary>Gets or sets the value that indicates whether font object is underline.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.FontDescriptor.Italic">
+      <summary>Gets or sets the value that indicates whether font object is italic.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.#ctor(System.String,System.Single,PerpetuumSoft.Framework.Drawing.FontStyleMode,PerpetuumSoft.Framework.Drawing.FontStyleMode,PerpetuumSoft.Framework.Drawing.FontStyleMode)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.FontDescriptor" /> class with specified parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.FontDescriptor.Strikeout">
+      <summary>Gets or sets the strikeout mode of a string that is displayed with this font. </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.#ctor(System.String,System.Single,PerpetuumSoft.Framework.Drawing.FontStyleMode,PerpetuumSoft.Framework.Drawing.FontStyleMode,PerpetuumSoft.Framework.Drawing.FontStyleMode,PerpetuumSoft.Framework.Drawing.FontStyleMode)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.FontDescriptor" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.Dispose">
+      <summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.FontDescriptor.#ctor(System.Drawing.Font)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.FontDescriptor" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.FontDescriptor.Size">
+      <summary>Gets or sets the size of font.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.FontStyleMode">
+      <summary>Enumerates modes for font styles.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.FontStyleMode.On">
+      <summary>Style is enabled.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.FontStyleMode.Off">
+      <summary>Style is disabled.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.FontStyleMode.Default">
+      <summary>Default mode.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.GDIPlusStream">
+      <exclude>
+      </exclude>
+      <summary>Implementation of GrphicsStream for GDI plus graphics drawing.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.GradientColor">
+      <summary>Represents the gradient color, defined by <see cref="T:System.Drawing.Color" /> structure and portion in the end fill.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.GradientColor.Portion">
+      <summary>Gets or sets the bound the current color is used up to.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.GradientColor.Color">
+      <summary>Gets or sets gradient color.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColor.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.GradientColor" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColor.#ctor(System.Drawing.Color,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.GradientColor" /> class with specified parameters.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.GradientColorCollection">
+      <summary>Represents the collection of gradient colors.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.Insert(System.Int32,PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>Inserts the gradient color into the collection at the specified index.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.OnInsertComplete(System.Int32,System.Object)">
+      <summary>Performs additional custom processes after inserting a new gradient color into the collection instance.</summary>
+    </member>
+    <member name="E:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChanged">
+      <summary>Occurs after the collection has been changed.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.GradientColorCollection.Item(System.Int32)">
+      <summary>Gets or sets the gradient color at the specified index. </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.Remove(PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>Removes the first occurrence of a gradient color from the collection.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.Add(PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>Adds the gradient color to the collection.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.Contains(PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>Determines whether a gradient color is in the collection.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.GradientColorCollection" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.OnRemoveComplete(System.Int32,System.Object)">
+      <summary>Performs additional custom processes after removing the gradient color from the collection instance.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.OnInsert(System.Int32,System.Object)">
+      <summary>Performs additional custom processes before inserting a new gradient color into the collection instance.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.IndexOf(PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>Overloaded. Returns the zero-based index of the first gradient color occurrence in the collection or in a portion of it.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.OnValidate(System.Object)">
+      <summary>Performs additional custom processes when validating a value.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.AddRange(PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>Adds an element to the collection. </summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChangedEventHandler">
+      <summary>Represents the method that will handle the CollectionChanged.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChangedEventHandler.#ctor(System.Object,System.IntPtr)">	<summary>		Initializes a new instance of the		<see cref="T:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChangedEventHandler" />		 class.	</summary></member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChangedEventHandler.Invoke(PerpetuumSoft.Framework.Drawing.GradientColor)">
+      <summary>
+      </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChangedEventHandler.BeginInvoke(PerpetuumSoft.Framework.Drawing.GradientColor,System.AsyncCallback,System.Object)">
+      <summary>
+      </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GradientColorCollection.CollectionChangedEventHandler.EndInvoke(System.IAsyncResult)">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.GraphicStream">
+      <summary>Encapsulates drawing surface.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPath(PerpetuumSoft.Framework.Drawing.Fill,System.Drawing.Drawing2D.GraphicsPath,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Fills the region assigned by the Path.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawPie(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double,System.Double)">
+      <summary>Draws the interior of a pie section defined by an ellipse specified by a <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure and two radial lines.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawGraphicsPath(PerpetuumSoft.Framework.Drawing.Stroke,System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>Draws the interior of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.ClipRectangle(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Limits the drawing region of this <see cref="T:PerpetuumSoft.Framework.Drawing.GraphicStream" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.Flush">
+      <summary>Flushes any underlying stream, performs all the operations required to complete the operation.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,PerpetuumSoft.Framework.Drawing.FontDescriptor,System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,System.Double,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws the Text.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,System.Drawing.Font,System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.ContentAlignment)">
+      <summary>Draws the specified text string.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawPie(PerpetuumSoft.Framework.Drawing.Stroke,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Draws the interior of a pie section defined by an ellipse specified by a pair of coordinates, width, height and two radial lines.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.Close">
+      <summary>Close the graphics stream.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,PerpetuumSoft.Framework.Drawing.FontDescriptor,PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.ContentAlignment)">
+      <summary>Draws the specified text string in the specified rectangle with the specified <see cref="t:PerpetuumSoft.Framework.Drawing.Fill" /> and <see cref="T:System.Drawing.Font" /> objects using the alignment of the specified <see cref="T:System.Drawing.ContentAlignment" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawRectangle(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Draws the interior of an recrangle defined by the <see cref="T:PerpetuumSoft.Framework.Drawing.Stroke" /> object and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawPie(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector,System.Double,System.Double)">
+      <summary>Draws the interior of a pie section defined by an ellipse specified by two <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structures and two radial lines.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawHtmlText(PerpetuumSoft.Framework.Drawing.VectorRectangle,PerpetuumSoft.Framework.Text.FormattedText)">
+      <summary>Draws formatted text.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawGraphicsPath(System.Drawing.Color,System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>Draws the interior of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawArc(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector,System.Double,System.Double)">
+      <summary>Draws the arc representing a portion of an ellipse specified by two <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structures.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPie(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector,System.Double,System.Double)">
+      <summary>Fills the interior of a pie section defined by an ellipse specified by two <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structures and two radial lines.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.ClipPath(System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>Sets the clipping assigned by the Path.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawRectangle(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double)">
+      <summary>Draws the interior of an recrangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.EndGroup">
+      <summary>Closes the current graphics container and restores the state of this Graphics object to the state saved by the call to the <see cref="M:PerpetuumSoft.Framework.Drawing.GraphicStream.BeginGroup" /> method.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawCircle(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Draws the interior of the circle defined by the <see cref="T:System.Drawing.Color" /> stroke, center point specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structure and the given radius.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawLine(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws a line connecting two points defined by <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structures.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawCircle(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Draws the interior of the circle defined by the <see cref="T:PerpetuumSoft.Framework.Drawing.Stroke" /> object, center point specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structure and the given radius.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,PerpetuumSoft.Framework.Drawing.VectorRectangle,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.GraphicsUnit)">
+      <summary>Draws the specified portion of the specified <see cref="T:System.Drawing.Image" /> object at the specified location and with the specified size.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,PerpetuumSoft.Framework.Drawing.FontDescriptor,System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.ContentAlignment)">
+      <summary>Draws the specified text string.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillEllipse(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Fills the interior of an ellipse defined by the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawArc(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double,System.Double)">
+      <summary>Draws the arc representing a portion of an ellipse specified by a <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawEllipse(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Draws the interior of an ellipse defined by the <see cref="T:System.Drawing.Color" /> structure and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,System.Double,System.Double,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.GraphicsUnit)">
+      <summary>Draws a portion of an image at a specified location.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillRectangle(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Fills the interior of an rectangle defined by the <see cref="T:System.Drawing.Color" /> structure and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,System.Drawing.Font,System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Draws the specified text string at the location rectangle with the specified <see cref="T:System.Drawing.Color" /> structure and <see cref="T:System.Drawing.Font" /> object at specified angle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Draws the specified <see cref="T:System.Drawing.Image" /> object at the specified location and with the specified size.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,System.Drawing.Font,System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,System.Double,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws the Text.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillRectangle(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double)">
+      <summary>Fills a rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawRectangle(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double)">
+      <summary>Draws the interior of an recrangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,System.Drawing.Font,PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Draws the specified text string at the location rectangle with the specified <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> and <see cref="T:System.Drawing.Font" /> objects at specified angle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.GraphicsUnit)">
+      <summary>Draws the specified portion of the specified <see cref="T:System.Drawing.Image" /> object at the specified location and with the specified size.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawArc(PerpetuumSoft.Framework.Drawing.Stroke,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Draws the arc representing a portion of an ellipse specified by a pair of coordinates, width and height.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPie(PerpetuumSoft.Framework.Drawing.Fill,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, width, height and two radial lines.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,PerpetuumSoft.Framework.Drawing.FontDescriptor,PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Draws the specified text string at the location rectangle with the specified <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> and <see cref="T:System.Drawing.Font" /> objects at specified angle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPath(PerpetuumSoft.Framework.Drawing.Fill,System.Drawing.Drawing2D.GraphicsPath)">
+      <summary>Fills the interior of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,System.Double,System.Double)">
+      <summary>Draws the specified image, using its original physical size, at the location specified by a coordinate pair.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,System.Drawing.Font,PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,System.Double,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws the Text.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Draws the specified <see cref="T:System.Drawing.Image" /> object at the specified location and with the specified size.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.Transform(System.Drawing.Drawing2D.Matrix)">
+      <summary>Applies the given transform matrix for current graphics object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillCircle(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Fills the interior of the circle defined by the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object, center point specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structure and the given radius.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawRectangle(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Draws the interior of an rectangle defined by the <see cref="T:System.Drawing.Color" /> structure and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,PerpetuumSoft.Framework.Drawing.FontDescriptor,System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Draws the specified text string at the location rectangle with the specified <see cref="T:System.Drawing.Color" /> structure and <see cref="T:System.Drawing.Font" /> object at specified angle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillRectangle(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Fills the interior of an recrangle defined by the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.SetSmoothMode(System.Boolean)">
+      <summary>Sets the smooth graphics settings.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawEllipse(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Draws the interior of an ellipse defined by the <see cref="T:PerpetuumSoft.Framework.Drawing.Stroke" /> object and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.BeginGroup">
+      <summary>Saves a graphics container with the current state of this Graphics object and opens and uses a new graphics container.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawImage(System.Drawing.Image,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws the specified <see cref="T:System.Drawing.Image" /> object, using its original physical size, at the specified location.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPie(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double,System.Double)">
+      <summary>Fills the interior of a pie section defined by an ellipse specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure and two radial lines.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillEllipse(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Fills the interior of an ellipse defined by the <see cref="T:System.Drawing.Color" /> structure and bounding rectangle specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> structure.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillCircle(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,System.Double)">
+      <summary>Fills the interior of the circle defined by the <see cref="T:System.Drawing.Color" /> stroke, center point specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structure and the given radius.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawLine(System.Drawing.Color,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws a line connecting two points defined by <see cref="T:PerpetuumSoft.Framework.Drawing.Vector" /> structures.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,PerpetuumSoft.Framework.Drawing.FontDescriptor,PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,System.Double,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws the Text.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawText(System.String,System.Drawing.Font,PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Drawing.ContentAlignment)">
+      <summary>Draws the specified text string in the specified rectangle with the specified <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> and <see cref="T:System.Drawing.Font" /> objects using the alignment of the specified <see cref="T:System.Drawing.ContentAlignment" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawLine(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws a line.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawLine(System.Drawing.Color,System.Double,PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws a line.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.DrawPolygon(PerpetuumSoft.Framework.Drawing.Stroke,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Draws a polygon. </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPolygon(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector,System.Drawing.Drawing2D.FillMode)">
+      <summary>Filling of the set polygon.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.GraphicStream.FillPolygon(PerpetuumSoft.Framework.Drawing.Fill,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Filling of the set polygon.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.HatchFill">
+      <summary>Defines the fill with a hatch style, a foreground color, and a background color.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.GetReplaceColor">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.HatchFill.BackColor">
+      <summary>Gets the color of spaces between the hatch lines drawn by this <see cref="T:PerpetuumSoft.Framework.Drawing.HatchFill" /> object.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.HatchFill.ForeColor">
+      <summary>Gets the color of hatch lines drawn by this <see cref="T:PerpetuumSoft.Framework.Drawing.HatchFill" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.HatchFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.#ctor(System.Drawing.Color,System.Drawing.Color,System.Drawing.Drawing2D.HatchStyle)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.HatchFill" /> class with the specified style.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.HatchFill.Style">
+      <summary>Gets the hatch style of this <see cref="T:PerpetuumSoft.Framework.Drawing.HatchFill" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.HatchFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.LinearGradientFill">
+      <summary>Encapsulates the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object with a linear gradient.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.LinearGradientFill.StartColor">
+      <summary>Gets or sets the beginning color.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.LinearGradientFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.#ctor(System.Drawing.Color,System.Drawing.Color,System.Double)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.LinearGradientFill" /> class with specified parameters.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.LinearGradientFill.Angle">
+      <summary>Gets or sets the angle of fill.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.LinearGradientFill.Colors">
+      <summary>Gets the set of colors used for the fill.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.LinearGradientFill.EndColor">
+      <summary>Gets or sets the end color.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.GetReplaceColor">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.LinearGradientFill.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.LineDirection">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.LineShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.LineStyle">
+      <summary>Enumerates the styles for line drawing.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.LineStyle.Solid">
+      <summary>Specifies a solid line.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.LineStyle.None">
+      <summary>No line.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.LineStyle.Dot">
+      <summary>Specifies a line consisting of dots.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.LineStyle.DashDot">
+      <summary>Specifies a line consisting of the repeated pattern of dash-dot.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.LineStyle.Dash">
+      <summary>Specifies a line consisting of dashes.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.LineStyle.DashDotDot">
+      <summary>Specifies a line consisting of a repeated pattern of dash-dot-dot.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Margins">
+      <summary>Represents control's margins.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.#ctor(System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Margins" /> class with specified parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.Top">
+      <summary>Gets or sets the top margin of an element.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Margins" /> class with specified parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.Left">
+      <summary>Gets or sets the left margin of an element.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.ConvertUnits(PerpetuumSoft.Framework.Drawing.Unit,PerpetuumSoft.Framework.Drawing.Unit)">
+      <summary>Create new margins in the new system of counting.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.ToString(System.String)">
+      <summary>Returns a string that represents the Margins object.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.Right">
+      <summary>Gets or sets the right margin of an element.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.IsEmpty">
+      <summary>Returns true if Left, Top, Right and Bottom properties are zero; otherwise, false.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.ToString(System.IFormatProvider)">
+      <summary>Returns a string that represents the Margins object.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.Bottom">
+      <summary>Gets or sets the bottom margin of an element.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.Parse(System.String,System.Globalization.NumberStyles)">
+      <summary>Converts the string representation of margins in a specified style to its equivalent.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.Parse(System.String,System.IFormatProvider)">
+      <summary>Converts the string representation of margins in a specified culture-specific format to its equivalent.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.ToString(System.String,System.IFormatProvider)">
+      <summary>Returns a string that represents the Margins object.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.Empty">
+      <summary>Gets the empty <see cref="T:PerpetuumSoft.Framework.Drawing.Margins" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+      <summary>Converts the string representation of margins in a specified style and culture-specific format to its equivalent.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.Parse(System.String)">
+      <summary>Converts the string representation of margins to its equivalent.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.Clone">
+      <summary>Creates a copy of the Margins.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Margins.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Margins.Size">
+      <summary>Gets the size of margins.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.MultiGradientFill">
+      <summary>Encapsulates the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object with a multilinear gradient.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.MultiGradientFill.Angle">
+      <summary>Gets or sets the angle of fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.MultiGradientFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.#ctor(System.Double)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.MultiGradientFill" /> class with specified parameters.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.MultiGradientFill.Colors">
+      <summary>Gets collection of colors for the fill specified by the <see cref="T:PerpetuumSoft.Framework.Drawing.GradientColorCollection" /> object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.MultiGradientFill.GetReplaceColor">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ParallelogramShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.PDF417BarCode.TypeBarCode">
+      <summary>Enumerates a compaction mode.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PDF417BarCode.TypeBarCode.NumericMode">
+      <summary>Numeric compaction mode.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PDF417BarCode.TypeBarCode.ByteMode">
+      <summary>Byte compaction mode.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PDF417BarCode.TypeBarCode.TextMode">
+      <summary>Text compaction mode.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Pdf417Settings">
+      <summary>Represents barcode settings of the PDF417 type.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Pdf417Settings.Type">
+      <summary>Gets or sets a compaction mode.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Pdf417Settings.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Pdf417Settings" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Pdf417Settings.IsValidSettings(System.String,System.Int32,System.Int32,System.Int32,PerpetuumSoft.Framework.Drawing.PDF417BarCode.TypeBarCode)">
+      <summary>Defines if the specified setting values are correct in the aggregate. Returns "true" if values are correct and "false" is not.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Pdf417Settings.ErrorLevel">
+      <summary>Gets or sets error correction level.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Pdf417Settings.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Pdf417Settings.RowsCount">
+      <summary>Gets or sets rows count.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Pdf417Settings.ColumnsCount">
+      <summary>Gets or sets columns count.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.PictureFormat">
+      <summary>Available Image Formats.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PictureFormat.Jpeg">
+      <summary>JPEG image format.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PictureFormat.Png">
+      <summary>PNG image format.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PictureFormat.Svg">
+      <summary>SVG image format.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PictureFormat.Bmp">
+      <summary>BMP image format.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PictureFormat.Flash">
+      <summary>FLASH image format.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.PictureFormat.Gif">
+      <summary>GIF image format.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.PolygonShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.RectangleShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.RectTriangleShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle">
+      <summary>Rounded rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.VectorRectangle">
+      <summary>Gets or sets a rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.Ry">
+      <summary>Gets or sets y-axis radius of the ellipse used to round off the corners of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.Rx">
+      <summary>Gets or sets x-axis radius of the ellipse used to round off the corners of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.Width">
+      <summary>Gets or sets width of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.Y">
+      <summary>Gets or sets Y coordinate of the top left corner of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.Height">
+      <summary>Gets or sets height of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.X">
+      <summary>Gets or sets X coordinate of the top left corner of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.#ctor(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle.#ctor(PerpetuumSoft.Framework.Drawing.VectorRectangle,System.Double,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.RoundedVectorRectangle" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.RoundRectangleShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Shadow">
+      <exclude>
+      </exclude>
+      <summary>Defines properties of a shadow.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ShapeBase">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ShapeDirection">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.SimpleStroke">
+      <summary>Encapsulates the <see cref="T:PerpetuumSoft.Framework.Drawing.Stroke" /> object with a simple stroke.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.#ctor(PerpetuumSoft.Framework.Drawing.LineStyle,System.Drawing.Color,System.Double)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SimpleStroke" /> class with specified parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SimpleStroke.Color">
+      <summary>Gets or sets the <see cref="T:System.Drawing.Color" /> of stroke.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SimpleStroke" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.#ctor(PerpetuumSoft.Framework.Drawing.LineStyle,System.Drawing.Color,System.Double,System.Single,System.Single,System.Single)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SimpleStroke" /> class with specific parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SimpleStroke.DashLenght">
+      <summary>Gets or sets dash length.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SimpleStroke.DotLenght">
+      <summary>Gets or sets dot length.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.CreatePen">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Stroke.CreatePen" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SimpleStroke.SpaceLenght">
+      <summary>Gets or sets space length.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SimpleStroke.Style">
+      <summary>Gets or sets the <see cref="T:PerpetuumSoft.Framework.Drawing.LineStyle" /> of this stroke.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SimpleStroke.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SimpleStroke.Width">
+      <summary>Overridden. See <see cref="P:PerpetuumSoft.Framework.Drawing.Stroke.Width" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.SolidFill">
+      <summary>Encapsulates the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object with single fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.#ctor(System.Drawing.Color)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SolidFill" /> class with specified parameters.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SolidFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.GetReplaceColor">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SolidFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SolidFill.Color">
+      <summary>Gets or sets the <see cref="T:System.Drawing.Color" /> of current fill.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.SphericalFill">
+      <summary>Encapsulates the <see cref="T:PerpetuumSoft.Framework.Drawing.Fill" /> object with the spherical gradient.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.GetReplaceColor">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.GetReplaceColor" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SphericalFill.StartColor">
+      <summary>Gets or sets the beginning color.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SphericalFill.Delta">
+      <summary>Gets or sets the position center fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Drawing.Fill.CreateBrush(PerpetuumSoft.Framework.Drawing.VectorRectangle)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SphericalFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.#ctor(System.Drawing.Color,System.Drawing.Color,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SphericalFill" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.#ctor(System.Drawing.Color,System.Drawing.Color,System.Double,System.Double)">
+      <summary>Initializes the new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.SphericalFill" /> class with specified parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SphericalFill.EndColor">
+      <summary>Gets or sets the end color.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SphericalFill.Colors">
+      <summary>Gets the set of colors used for the fill.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.SphericalFill.Clone">
+      <summary>Overridden. See <see cref="M:PerpetuumSoft.Framework.Atom.Clone" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.SphericalFill.Angle">
+      <summary>Gets or sets the angle of center fill position relative to center of element.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.StarShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Stroke">
+      <summary>Represents base abstract class for all stroke types.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Stroke.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Stroke.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Stroke.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Stroke.Width">
+      <summary>Gets or sets the width of the stroke.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Stroke.Empty">
+      <summary>Gets the empty <see cref="T:PerpetuumSoft.Framework.Drawing.Stroke" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Stroke.CreatePen">
+      <summary>Returns a Pen object for the choosen stroke type.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ToolboxImageAttribute">
+      <summary>Represents the attribute which sets the collection of icons of different sizes.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ToolboxImageAttribute.#ctor(System.Type)">
+      <summary>Initializes a new instance of the<see cref="T:PerpetuumSoft.Framework.Drawing.ToolboxImageAttribute" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ToolboxImageAttribute.GetImage(PerpetuumSoft.Framework.Drawing.ToolButtonsDisplayMode)">
+      <summary>Gets the image by the set displaying mode.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.ToolboxImageAttribute.GetSmallImage">
+      <summary>Gets the image which corresponds to the lowest displaying mode. </summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ToolButtonsDisplayMode">
+      <summary>Enumerates icon displaying modes.</summary>
+    </member>
+    <member name="F:F:PerpetuumSoft.Framework.Drawing.ToolButtonsDisplayMode.Small">
+      <summary>Small size icon.</summary>
+    </member>
+    <member name="F:F:PerpetuumSoft.Framework.Drawing.ToolButtonsDisplayMode.Medium">
+      <summary>Medium size icon.</summary>
+    </member>
+    <member name="F:F:PerpetuumSoft.Framework.Drawing.ToolButtonsDisplayMode.Large">
+      <summary>Large size icon.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.TriangleShape">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Unit">
+      <summary>Incapsulates properties of a measure unit.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Point">
+      <summary>Predefined the measure unit equal to an point.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Centimeter">
+      <summary>Predefined the measure unit equal to a centimeter.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.GetStandartUnits">
+      <summary>Identifies one of the predefined measure units using the specified name.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.K">
+      <summary>Gets ratio of the measure unit to the internal unit.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Twip">
+      <summary>Predefined the measure unit equal to an twip.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.Convert(System.Double,PerpetuumSoft.Framework.Drawing.Unit,PerpetuumSoft.Framework.Drawing.Unit)">
+      <summary>Converts a value from one specified measure unit to another.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.#ctor(System.String,System.String,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.Unit" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Inch">
+      <summary>Predefined the measure unit equal to an inch.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Name">
+      <summary>Gets the name of a measure unit.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.InternalUnit">
+      <summary>Predefined the measure unit that is used for internal representation of sizes within the objects of the report generator.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.ShortName">
+      <summary>Gets the short name of measure unit.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Millimeter">
+      <summary>Predefined the measure unit equal to a millimeter.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Unit.FromName(System.String)">
+      <summary>Creates unit from name.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Drawing.Unit.StandardGraphicsUnit">
+      <summary>Graphics unit used as the basis.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Unit.Pixel">
+      <summary>Predefined the measure unit equal to an pixel.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.Vector">
+      <summary>Defines the properties of vectors on a plane and operations on these vectors.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Multiply(System.Double)">
+      <exclude>
+      </exclude>
+      <summary>Implements multiplication by the specified scalar value.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.#ctor(System.Drawing.Point)">
+      <summary>Constructs a vector for the specified point.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.TruncateSize">
+      <exclude>
+      </exclude>
+      <summary>Truncates the current Vector object to an integer Size.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Width">
+      <summary>Gets or sets the "width" duplicates the X-value.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.X">
+      <summary>Gets or sets X-component of the vector.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.#ctor(System.Drawing.SizeF)">
+      <summary>Constructs a vector for the specified integer size.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.GetPerpendicular">
+      <summary>Returns the vector that is perpendicular for this.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.CrossProduct(PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Returns vectors cross product.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ToString(System.String,System.IFormatProvider)">
+      <exclude>
+      </exclude>
+      <summary>Returns a String that represents the current Vector object with the specified format and <see cref="T:System.IFormatProvider" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Add(PerpetuumSoft.Framework.Drawing.Vector)">
+      <exclude>
+      </exclude>
+      <summary>Implements addition of given vector.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Length">
+      <summary>Gets or sets the length of the vector.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ToDegrees(System.Double)">
+      <exclude>
+      </exclude>
+      <summary>Converts radians angle to degrees.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Rotation">
+      <summary>Gets or sets rotation angle in radians.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Y">
+      <summary>Gets or sets Y-component of the vector.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Height">
+      <summary>Gets or sets the "height" duplicates the Y-value.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Rotate(System.Double)">
+      <summary>Rotates the vector on the given angle in radians.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.#ctor(System.Drawing.Size)">
+      <summary>Constructs a vector for the specified integer size.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.#ctor(System.Double,System.Double)">
+      <summary>Constructs a vector using the specified coordinate values. </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ToRadians(System.Double)">
+      <exclude>
+      </exclude>
+      <summary>Converts degrees angle to radians.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.#ctor(System.Drawing.PointF)">
+      <summary>Constructs a vector for the specified point.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.QuantX(System.Double)">
+      <summary>Snaps the X-component to a grid with the specified x-size of a cell.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.QuantY(System.Double)">
+      <summary>Snaps the Y-component to a grid with the specified y-size of a cell.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Abs">
+      <summary>Returns the modulus of the vector.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Item(PerpetuumSoft.Framework.Drawing.Direction)">
+      <summary>Gets or sets a value of the specified vector coordinate.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Parse(System.String,System.Globalization.NumberStyles)">
+      <exclude>
+      </exclude>
+      <summary>Parses string to get vector with <see cref="T:System.Globalization.NumberStyles" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ToString(System.IFormatProvider)">
+      <exclude>
+      </exclude>
+      <summary>Returns a String that represents the current Vector object with the specified <see cref="T:System:IFormatProvider" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Parse(System.String)">
+      <exclude>
+      </exclude>
+      <summary>Parses string to get vector.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.Empty">
+      <summary>Defines a "null"-vector.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ConvertUnits(PerpetuumSoft.Framework.Drawing.Unit,PerpetuumSoft.Framework.Drawing.Unit)">
+      <summary>Converts the vector from one specified measure units to another.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Subtract(PerpetuumSoft.Framework.Drawing.Vector)">
+      <exclude>
+      </exclude>
+      <summary>Implements subtraction of given vector.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Parse(System.String,System.IFormatProvider)">
+      <exclude>
+      </exclude>
+      <summary>Parses string to get vector with <see cref="T:System.IFormatProvider" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.DotProduct(PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Returns vectors dot product.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ToString(System.String)">
+      <exclude>
+      </exclude>
+      <summary>Returns a String that represents the current Vector object with the specified format.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.GetProjection(PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Returns the projection of this vector on the vector specified by parameters.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.FromPolar(System.Double,System.Double)">
+      <summary>Creates vector from polar coordinates.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Truncate">
+      <exclude>
+      </exclude>
+      <summary>Truncates the current Vector object to an integer Point.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.GetNormalized">
+      <summary>Returns a unit vector.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
+      <exclude>
+      </exclude>
+      <summary>Parses string to get vector with <see cref="T:System.Globalization.NumberStyles" /> and <see cref="T:System.IFormatProvider" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Quant(System.Double,System.Double)">
+      <summary>Snaps the vector to a grid with the specifed cell size.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.Vector.IsEmpty">
+      <summary>Returns true if this is a "null"-vector. </summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.Divide(System.Double)">
+      <exclude>
+      </exclude>
+      <summary>Implements division by the specified scalar value.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.Vector.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.VectorRectangle">
+      <summary>Defines the location and the size of a rectangle on a surface.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.GetDistance(PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Returns the distance between the current VectorRectangle object and the given point.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Y">
+      <summary>Gets or sets Y coordinate of the top left corner of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.BottomLeft">
+      <summary>Gets location of the bottom left corner of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Truncate">
+      <exclude>
+      </exclude>
+      <summary>Truncates the current VectorRectangle object to an integer Rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Center">
+      <summary>Gets location of the center of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.CenterY">
+      <summary>Gets Y coordinate of the center of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.ToString">
+      <summary>Overridden. See <see cref="M:System.Object.ToString" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Area">
+      <summary>Gets the area of the current VectorRectangle object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.GetHashCode">
+      <summary>Overridden. See <see cref="M:System.Object.GetHashCode" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.#ctor(System.Drawing.RectangleF)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.TopLeft">
+      <summary>Gets location of the top left corner of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.RightCenter">
+      <summary>Gets location of the center of the rectangle right side.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.LeftCenter">
+      <summary>Gets location of the center of the rectangle left side.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.BottomCenter">
+      <summary>Gets location of the center of the rectangle bottom side.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.CenterX">
+      <summary>Gets X coordinate of the center of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.TopRight">
+      <summary>Gets location of the top right corner of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Shrink(PerpetuumSoft.Framework.Drawing.Margins)">
+      <exclude>
+      </exclude>
+      <summary>Shrinks VectorRectangle by substracting margins (padding) inside. Returns VectorRectangle.Empty if ANY of the dimensions is smaller or EQUALS than margins.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.QuantX(System.Double)">
+      <summary>Aligns the current VectorRectangle instance horizontally using the specified grid x-step.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Intersect(PerpetuumSoft.Framework.Drawing.VectorRectangle,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <summary>Returns a new VectorRectangle instance that is an intersection of the two specified VectorRectangle objects.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Size">
+      <summary>Gets or sets the size of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Width">
+      <summary>Gets or sets the width of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.QuantY(System.Double)">
+      <summary>Aligns the current VectorRectangle instance vertically using the specified grid y-step.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.#ctor(System.Drawing.Rectangle)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.GetPositiveRectangle">
+      <summary>Returns a new VectorRectangle instance with the geometry identical to the current instance and with positive width and height values.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Union(PerpetuumSoft.Framework.Drawing.VectorRectangle,PerpetuumSoft.Framework.Drawing.VectorRectangle)">
+      <exclude>
+      </exclude>
+      <summary>Returns a new VectorRectangle instance that is a union of the two specified VectorRectangle objects.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Equals(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Object.Equals(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Bottom">
+      <summary>Gets Y coordinate of the bottom side of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Right">
+      <summary>Gets X coordinate of the right side of the rectangle.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Divide(System.Double)">
+      <summary>Implements division by given scalar value.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.BottomRight">
+      <summary>Gets location of the bottom right corner of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Left">
+      <summary>Gets X coordinate of the left side of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.X">
+      <summary>Gets or sets X coordinate of the top left corner of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Empty">
+      <summary>Returns the "null" rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.TopCenter">
+      <summary>Gets location of the center of the rectangle top side.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Quant(System.Double,System.Double)">
+      <summary>Aligns the current VectorRectangle instance using the specified grid steps.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.#ctor(PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Drawing.VectorRectangle" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Contains(PerpetuumSoft.Framework.Drawing.Vector)">
+      <summary>Returns whether the current VectorRectangle contains the specified point.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.IsEmpty">
+      <summary>Gets if width and height of the current VectorRectangle are zeros.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Expand(PerpetuumSoft.Framework.Drawing.Margins)">
+      <exclude>
+      </exclude>
+      <summary>Expands VectorRectangle by adding margins outside.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.ConvertUnits(PerpetuumSoft.Framework.Drawing.Unit,PerpetuumSoft.Framework.Drawing.Unit)">
+      <summary>Converts the vector from one specified measure units to another.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Drawing.VectorRectangle.Multiply(System.Double)">
+      <summary>Implements multiplication by given scalar value.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Height">
+      <summary>Gets or sets the height of the rectangle.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Location">
+      <summary>Gets or sets the location of the rectangle (the top left corner).</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Drawing.VectorRectangle.Top">
+      <summary>Gets Y coordinate of the top side of the rectangle.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Drawing.ZipCodePainter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.ExceptionBuilder">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.ExcludeDocumentationAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.AndOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.AtomExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.BuiltInFunctions">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.CalculateException">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ConcatOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ConstExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Design.ExpressionDataTreeNode">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Design.ExpressionDataTreeNodeCollection">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Design.ExpressionEditorForm">
+      <exclude>
+      </exclude>
+      <summary>Expression editor dialog</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Design.IExpressionDataService">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.DivideOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.EqualsOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ErrorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Expression">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ExpressionExceptionBuilder">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.FunctionCallExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.GreaterEqualsOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.GreaterOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ICustomFunction">
+      <summary>Sets methods to calculate function value by the set arguments. Sets methods for getting the function description and needed number of parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Expressions.ICustomFunction.CustomDescription">
+      <summary>Gets function destination description.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Expressions.ICustomFunction.QuantityParameters">
+      <summary>Gets the needed function parameters number.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.IExpression">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.IExpressionSite">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.InvalidExpressionException">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.InvalidSyntaxException">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.LessEqualsOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.LessOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Lexeme">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.MethodCallExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.MinusOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ModOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.MultiplyOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.NotEqualsOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.NotOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.ObjectRefExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.OperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.OrOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Parser">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.PlusOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.PropertyRefExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.RangeValue">
+      <summary>Respresents the range of values.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Expressions.RangeValue.GetRange(System.Double,System.Double,System.Double)">
+      <summary>Returns a new RangeValue object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Expressions.RangeValue.#ctor(System.Double,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Expressions.RangeValue" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Expressions.RangeValue.ToString">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Expressions.RangeValue.Equals(System.Object)">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Expressions.RangeValue.Minimum">
+      <summary>Gets the minimum range value.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Expressions.RangeValue.GetHashCode">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Expressions.RangeValue.System#IComparable#CompareTo(System.Object)">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Expressions.RangeValue.Maximum">
+      <summary>Gets the maximum range value.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Scaner">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.Token">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.UnaryMinusOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.UnaryOperatorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Expressions.VectorExp">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Geometry.GeometryUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Initializator">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.AssemblyDateAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.LicenseAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.LicenseHolder">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.LicenseOptionAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.LicensingUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.PerpetuumSoftLicense">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.PerpetuumSoftLicenseProvider">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.RegKey">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.TrialForm">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Licensing.WarningForm">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.Design.LocalizationBindCollectionConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.Design.LocalizationBindConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.Design.LocalizationKeyEditor">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.ILanguage">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.Language">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.LocalizableDescriptionAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.LocalizationBind">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.LocalizationBindCollection">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.LocalizationException">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.LocalizationFile">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.LocalizationProvider">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Localization.SelectLanguageForm">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.NeedRegisterAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.BooleanSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.BuiltInTypeSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.ClipboardAdapter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.CollectionSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.DictionarySerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.DoubleSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.FloatSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.ImageSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.Int32Serializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.IXSerializationManager">
+      <summary>Defines methods for object serialization.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.GetProperties(System.Object)">
+      <summary>Returns the collection of properties.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.GetObjectID(System.Object)">
+      <summary>Creates ID for the given object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.GetObjectByID(System.Int32)">
+      <summary>Returns the object by the given ID.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.AddPendingReference(System.Object,PerpetuumSoft.Framework.Serialization.MetaProperty,System.Int32)">
+      <summary>Adds the pending reference.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.GetSerializer(System.Type)">
+      <summary>Returns the serializer for the given type.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.RegisterObjectID(System.Object,System.Int32)">
+      <summary>Register the given object and ID in the inner Hashtable.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.IXSerializationManager.GetSerializer(System.Type,PerpetuumSoft.Framework.Serialization.MetaProperty)">
+      <summary>Returns the serializer for the given property of given type.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.MetaProperty">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.MetaPropertyProvider">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.MetaType">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.ObjectSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.Reference">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.ReferencePersistMode">
+      <summary>Enumerates the mode of serialization.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Serialization.ReferencePersistMode.Entity">
+      <summary>Object is serialized as the entity.</summary>
+    </member>
+    <member name="F:PerpetuumSoft.Framework.Serialization.ReferencePersistMode.Reference">
+      <summary>Object is serialized as the reference.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.SerializationException">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.TextCDataSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.TextElementSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.UnknownTypeSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.VectorSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.XSerializableAttribute">
+      <summary>Specifies whether a property should be serialized.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Serialization.XSerializableAttribute.ReferenceMode">
+      <summary>Gets the mode of serialization.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializableAttribute.Match(System.Object)">
+      <summary>Overridden. See <see cref="M:System.Attribute.Match(System.Object)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializableAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Serialization.XSerializableAttribute" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Serialization.XSerializableAttribute.Yes">
+      <summary>Gets predefined instance of XSerilizableAttribute.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializableAttribute.#ctor(PerpetuumSoft.Framework.Serialization.ReferencePersistMode)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Serialization.XSerializableAttribute" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.XSerializationManager">
+      <summary>Represents the class that is seralization manager.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Read(System.IO.TextReader)">
+      <summary>Returns the object using the given reader.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.RegisterObjectID(System.Object,System.Int32)">
+      <summary>Register the given object and ID in an inner Hashtable.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Read(System.IO.Stream)">
+      <summary>Returns the object from the given stream.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Write(System.Object,System.String)">
+      <summary>Writes the given object to the given file.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Read(System.String)">
+      <summary>Returns the object from the given file.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Read(System.Type,System.String)">
+      <summary>Returns the object from resources.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Write(System.Object,System.IO.TextWriter)">
+      <summary>Writes the given object using the given writer.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.GetProperties(System.Object)">
+      <summary>Returns the collection of properties.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Read(System.Xml.XmlReader)">
+      <summary>Returns the object using the given reader.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.GetObjectID(System.Object)">
+      <summary>Creates ID for the given object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Serialize(System.Object,System.Xml.XmlWriter)">
+      <summary>Serializes object using the specified writer.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.AddPendingReference(System.Object,PerpetuumSoft.Framework.Serialization.MetaProperty,System.Int32)">
+      <summary>Adds the pending reference.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Deserialize(System.Xml.XmlReader)">
+      <summary>Deserializes object using the specified reader.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.GetSerializer(System.Type,PerpetuumSoft.Framework.Serialization.MetaProperty)">
+      <summary>Returns the serializer for the given type.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Clone(System.Object)">
+      <summary>Returns the copy of the given object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Write(System.Object,System.Xml.XmlWriter)">
+      <summary>Writes the given object using the given writer.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.GetMetaType(System.Type)">
+      <summary>Returns MetaType for the given type.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.GetSerializer(System.Type)">
+      <summary>Returns the serializer for the given property of the given type.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Serialization.XSerializationManager" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.GetObjectByID(System.Int32)">
+      <summary>Returns the object by the given ID.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Serialization.XSerializationManager.Write(System.Object,System.IO.Stream)">
+      <summary>Writes the given object to the given stream.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.XSerializeMode">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.XSerializer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Serialization.XSerializerAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.Design.FormatEditorControl">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.Design.FormatEditorForm">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.FormattedText">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.FormattedTextReader">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder">
+      <summary>FormattedTextBuilder for GDI+.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.NewParagraph(PerpetuumSoft.Framework.Text.ParagraphStyle)">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.NewParagraph(PerpetuumSoft.Framework.Text.ParagraphStyle)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.StartParagraph">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.StartParagraph" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.OutText(System.String,PerpetuumSoft.Framework.Text.TextStyle,PerpetuumSoft.Framework.Text.TextMetric,System.Double)">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.OutText(System.String,PerpetuumSoft.Framework.Text.TextStyle,PerpetuumSoft.Framework.Text.TextMetric,System.Double)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.OutText(System.String,PerpetuumSoft.Framework.Text.TextStyle,PerpetuumSoft.Framework.Text.TextMetric,System.Double,System.Drawing.StringFormat)">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.OutText(System.String,PerpetuumSoft.Framework.Text.TextStyle,PerpetuumSoft.Framework.Text.TextMetric,System.Double,System.Drawing.StringFormat)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.GetTextMetric(System.String,PerpetuumSoft.Framework.Text.TextStyle)">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.GetTextMetric(System.String,PerpetuumSoft.Framework.Text.TextStyle)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.NewLine(PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Text.TextMetric)">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.NewLine(PerpetuumSoft.Framework.Drawing.Vector,PerpetuumSoft.Framework.Text.TextMetric)" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.EndBuild">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.EndBuild" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.EndParagraph">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.EndParagraph" />.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.RightToLeft">
+      <summary>Text orientation.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.#ctor(System.Drawing.Graphics)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder" /> class.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.StartBuild">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.StartBuild" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.GDIPlusFormattedTextBuilder.OutLine(System.Drawing.Color,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Implements <see cref="M:PerpetuumSoft.Framework.Text.IFormattedTextBuilder.OutLine(System.Drawing.Color,System.Double,System.Double,System.Double,System.Double)" />.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.HtmlParser">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.HtmlReader">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.HtmlScaner">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.HtmlToken">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.IFormattedText">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.IFormattedTextBuilder">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.IHtmlParserSite">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.ParagraphAlignment">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.ParagraphBreakType">
+	<exclude>
+		
+	</exclude>
+</member>
+    <member name="T:PerpetuumSoft.Framework.Text.ParagraphStyle">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.RtfReader">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.RtfScaner">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.RtfToken">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.TextFormat">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.TextFormatStyle">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.TextMetric">
+      <summary>Describes text metrics.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.TextMetric.EmptyTextMetric">
+      <summary>Returns TextMetric with empty parameters.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.TextMetric.Descent">
+      <summary>Text descent.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.TextMetric.Height">
+      <summary>Text heigth.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.TextMetric.IsCalculated">
+      <summary>Flasg indicating wether metrics has been calculated.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.TextMetric.Width">
+      <summary>Text width.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Text.TextMetric.Ascent">
+      <summary>Text ascent.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Text.TextMetric.#ctor(System.Double,System.Double,System.Double)">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Text.TextMetric" /> class.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.TextStyle">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Text.VerticalTextAlignment">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.AlgebraUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.COMUtilities">
+      <summary>Utilities for COM interoperability.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.COMUtilities.GetType(System.Runtime.InteropServices.VarEnum)">
+      <summary>Gets type based on given <see cref="T:System.Runtime.InteropServices.VarEnum" />.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.COMUtilities.GetVarEnum(System.Type)">
+      <summary>Gets <see cref="T:System.Runtime.InteropServices.VarEnum" /> based on given type.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.DataBindingUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.DesignConstructorAttribute">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.DoubleAutoConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.EncodingUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.FactoryTypeEditor">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.FileSystemUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.GenericTypeConverter">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.GraphicsUtilites">
+      <summary>Utilities for Graphics operations.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.GraphicsUtilites.MeasureText(System.String,System.Drawing.Font)">
+      <summary>Measures the specified string that is drawn with the specified Font object.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.GraphicsUtilites.GradientColor(System.Drawing.Color,System.Drawing.Color,System.Double)">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.GraphicsUtilites.MeasureText(System.Drawing.Graphics,System.String,System.Drawing.Font)">
+      <summary>Returns the size of the text if drawn with the given font for given Graphics.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.GraphicsUtilites.ScaleColor(System.Drawing.Color,System.Double)">
+      <summary>Scales brightness of the color using the given coefficient.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.GraphicsUtilites.MiddleColor(System.Drawing.Color,System.Drawing.Color)">
+      <summary>Calculates a middle color between two given colors.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.SortUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.SwapCollectionBase">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.TypeUtilities">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.UserSettingsManager">
+      <summary>The type for worknig with form settings</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.UserSettingsManager.SaveSettings(System.Windows.Forms.Form)">
+      <summary>Saves form settings</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.UserSettingsManager.LoadParam(System.Windows.Forms.Form)">
+      <summary>Loads parameter from register.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.UserSettingsManager.SaveParam(System.Windows.Forms.Form,System.Int32)">
+      <summary>Saves the specified parameter in the register.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.UserSettingsManager.LoadSettings(System.Windows.Forms.Form)">
+      <summary>Loads form settings</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Utilities.WinAPIUtilities">
+      <summary>API wrappers.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.WinAPIUtilities.GetComputerName">
+      <summary>Gets name of the current host.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.WinAPIUtilities.NetApiBufferFree(System.IntPtr)">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Utilities.WinAPIUtilities.BrowseLocalNetwork">
+      <summary>Gets names of the hosts in the local network.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.VersionInfo">
+      <exclude>Represents the version of the product.</exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.VersionSettings">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.Action">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ActionBind">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ActionCollection">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="">
+</member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ActionList">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel">
+      <summary>Advanced label control.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel" /> class.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel.LinkControl">
+      <summary>Gets or sets control linked to the lable.</summary>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel.Dispose(System.Boolean)">
+      <summary>'Implements <see cref="M:System.IDisposable.Dispose" />.</summary>
+      <exclude>
+      </exclude>
+    </member>
+    <member name="M:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel.OnResize(System.EventArgs)">
+      <summary>Overrides standard OnResize logic.</summary>
+    </member>
+    <member name="P:PerpetuumSoft.Framework.Windows.Forms.AdvancedLabel.ControlMinWidth">
+      <summary>Gets or sets minimum width of the linked control.</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ButtonBind">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.Design.CollectionEditor">
+      <exclude>
+      </exclude>
+      <summary>The type for working with collections</summary>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.Design.LocalizablePropertyDescriptor">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.Design.LocalizablePropertyTab">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.DesignerContainer">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.DesignerSite">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ExecEventArgs">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.FormControl">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.FormControl+CloseEventArgs">
+	<summary>
+		
+	</summary>
+</member>
+    <member name="M:PerpetuumSoft.Framework.Windows.Forms.FormControl.CloseEventArgs.#ctor(System.Boolean)">	<summary>		Initializes a new instance of the		<see cref="T:PerpetuumSoft.Framework.Windows.Forms.FormControl.CloseEventArgs" />		 class.	</summary></member>
+    <member name="P:PerpetuumSoft.Framework.Windows.Forms.FormControl.CloseEventArgs.Cancel">
+      <summary>Gets</summary>
+    </member>
+    <member name="">
+</member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ListItem`1">
+      <exclude>Initializes a new instance of the <see cref="T:PerpetuumSoft.Framework.Windows.Forms.ListItem`1" /> class.</exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ListViewEditable">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.LocalizablePropertyGrid">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.MenuItemBind">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.MessageForm">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.SubItemEndEditingEventArgs">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.SubItemEndEditingEventHandler">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.SubItemEventArgs">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.SubItemEventHandler">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ToolButtonBind">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ToolStripDropDownFormControl`1">
+      <exclude>
+      </exclude>
+    </member>
+    <member name="T:PerpetuumSoft.Framework.Windows.Forms.ToolStripDropDownFormControl`1+ControlEventArgs">
+	<summary>
+		
+	</summary>
+</member>
+    <member name="M:PerpetuumSoft.Framework.Windows.Forms.ToolStripDropDownFormControl`1.ControlEventArgs.#ctor(ControlType)">	<summary>		Initializes a new instance of the		<see cref="T:PerpetuumSoft.Framework.Windows.Forms.ToolStripDropDownFormControl`1.ControlEventArgs" />		 class.	</summary></member>
+    <member name="P:PerpetuumSoft.Framework.Windows.Forms.ToolStripDropDownFormControl`1.ControlEventArgs.Control">
+      <summary>Gets</summary>
+    </member>
+    <member name="">
+</member>
+  </members>
+</doc>

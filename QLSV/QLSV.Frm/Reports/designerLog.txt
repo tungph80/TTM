@@ -1,0 +1,61 @@
+6/23/2015 4:54:15 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+6/23/2015 5:43:23 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+6/23/2015 5:45:35 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+6/23/2015 5:45:38 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+6/23/2015 5:52:12 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+6/23/2015 5:52:22 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+6/23/2015 5:53:03 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+6/23/2015 6:01:51 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+7/1/2015 4:00:02 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+7/1/2015 4:01:44 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+7/1/2015 4:03:19 PM   DEBUG Cannot hide baloon System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'LocalizablePropertyGrid'.
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.GetSafeHandle(IWin32Window window)
+   at System.Windows.Forms.ToolTip.Hide(IWin32Window win)
+   at PerpetuumSoft.Framework.Windows.Forms.Balloon.timer_Tick(Object sender, EventArgs e)
+7/1/2015 4:03:25 PM   DEBUG Cannot hide baloon System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'LocalizablePropertyGrid'.
+   at System.Windows.Forms.Control.CreateHandle()
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.GetSafeHandle(IWin32Window window)
+   at System.Windows.Forms.ToolTip.Hide(IWin32Window win)
+   at PerpetuumSoft.Framework.Windows.Forms.Balloon.timer_Tick(Object sender, EventArgs e)
+7/1/2015 4:07:29 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+7/1/2015 4:07:55 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+7/1/2015 4:08:41 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>~etuumSoft.Reporting.Export.Pdf</name>
+  </assembly>
+  <members>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.RichTextPdfAdapter"><summary>Represents adapter for the RichText class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.AdvancedTextPdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Creates a new instance of AdvancedTextPdfAdapter class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilterFactory.CreateFilter"><summary>Overrided. See <see cref="M:PerpetuumSoft.Reporting.Export.ExportFilterFactory.CreateFilter" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.ShowDialog"><summary>Overrided. See <see cref="M:PerpetuumSoft.Reporting.Export.ExportFilter.ShowDialog" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Renders control to Pdf.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.GetTempGraphics"><summary>Returns temporary Graphics.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.ReportControlPdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Default constructor for ReportControlPdfAdapter.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.GetFactory"><summary>Overrided. See <see cref="M:PerpetuumSoft.Reporting.Export.ExportFilter.GetFactory" />.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.AdvancedTextPdfAdapter"><summary>Represents adapter for the AdvancedText class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.RegisterAdapter(System.Type,System.Type)"><summary>Registers a new adapter.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.TextBoxPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.Export(PerpetuumSoft.Reporting.DOM.Document,System.IO.Stream)"><summary>Exports given document to the specified stream.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.#ctor(System.ComponentModel.IContainer)"><summary>Initializes a new instance of the PdfExportFilter class with the specified container.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.FindAdapterType(System.Type)"><summary>Returns PdfAdapter instance corresponding to the given control type.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PicturePdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Default constructor fo PicturePdfAdapter.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.WriteHyperlink(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Writes HyperLink into a PDF document.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.TextBoxPdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Default constructor for TextBoxPdfAdapter.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.KeepOriginalImageResolutionAndQuality"><summary>Gets and sets whether image resolution and quality will be stored in the result pdf file.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter"><summary>Represents the instance of the pdf filter class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.CreateAdapter(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Registers new adapter.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.ShapePdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Default constructor for ShapePdfAdapter.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Default constructor for PdfAdapter.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.EmbedFonts"><summary>Gets and sets whether fonts will be embedded in result pdf file.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.AdvancedTextPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Location"><summary>Control location.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.RichTextPdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Default constructor for TextBoxPdfAdapter.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.RichTextPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.ContentRectangle"><summary>Gets the content rectangle of a Box control.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.TextBoxPdfAdapter"><summary>Represents adapter for the TextBox class.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.ImageQuality"><summary>Gets and sets image quality if needed.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter"><summary>Incapsulates conversion methods for different types of report controls.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilterFactory.Factory"><summary>Gets default instance of the PdfExportFilterFactory class.</summary></member>
+    <member name="F:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.control"><summary>Base ReportControl.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.#ctor(PerpetuumSoft.Reporting.DOM.ReportControl)"><summary>Creates a new instance for BoxPdfAdapter class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.ExportDocument(PerpetuumSoft.Reporting.DOM.Document,System.IO.Stream)"><summary>Exports given document to the specified stream.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.ExportDocument(PerpetuumSoft.Reporting.DOM.Document,System.String)"><summary>Exports given document to the specified file.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PicturePdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.ShapePdfAdapter"><summary>Represents adapter for the Shape class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilterFactory.GetFilterFormat"><summary>Overrided. See <see cref="M:PerpetuumSoft.Reporting.Export.ExportFilterFactory.GetFilterFormat" />.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter"><summary>Represents adapter for the Box class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.GetAvailableParametersNames"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.ExportFilter.GetAvailableParametersNames" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.RenderContent(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Renders contents into PDF.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.#ctor"><summary>Initializes a new instance of the PdfExportFilter class.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilterFactory"><summary>Creates PdfExportFilter instaces.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Dispose"><summary>Implements <see cref="M:System.IDisposable.Dispose" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilterFactory.GetFilterFileExtension"><summary>Overrided. See <see cref="M:PerpetuumSoft.Reporting.Export.ExportFilterFactory.GetFilterFileExtension" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.ReportControlPdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Size"><summary>Control size.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.ReportControlPdfAdapter"><summary>Represents adapter for the ReportControl class.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.ShapePdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.BoxPdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)"><summary>Overridden. See <see cref="M:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PdfAdapter.Render(PerpetuumSoft.Writers.Pdf.PdfWriter)" />.</summary></member>
+    <member name="T:PerpetuumSoft.Reporting.Export.Pdf.Adapters.PicturePdfAdapter"><summary>Represents adapter for the Picture class.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.EmbedPrivateCharacters"><summary>Gets or sets value indicating whether eudc characted would be embed into PDF document.</summary></member>
+    <member name="P:PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter.ImageResolution"><summary>Gets and sets image resolution if needed.</summary></member>
+  </members>
+</doc>

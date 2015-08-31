@@ -1,0 +1,7 @@
+D:\New\QLSV\QLSV\QLSV.Data\bin\Debug\QLSV.Data.dll
+D:\New\QLSV\QLSV\QLSV.Data\bin\Debug\QLSV.Data.pdb
+D:\New\QLSV\QLSV\QLSV.Data\bin\Debug\QLSV.Core.dll
+D:\New\QLSV\QLSV\QLSV.Data\bin\Debug\QLSV.Core.pdb
+D:\New\QLSV\QLSV\QLSV.Data\obj\Debug\QLSV.Data.csprojResolveAssemblyReference.cache
+D:\New\QLSV\QLSV\QLSV.Data\obj\Debug\QLSV.Data.dll
+D:\New\QLSV\QLSV\QLSV.Data\obj\Debug\QLSV.Data.pdb
