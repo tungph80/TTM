@@ -101,3 +101,35 @@ Void set_Item(Int32, System.Object)
 System.InvalidCastException: Unable to cast object of type 'Infragistics.Win.UltraWinGrid.UltraGridCell' to type 'System.IConvertible'.
    at System.Data.Common.Int32Storage.Set(Int32 record, Object value)
    at System.Data.DataColumn.set_Item(Int32 record, Object value)
+10:04:24 There are not enough fields in the Structured type.  Structured types must have at least one field.
+System.Data
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at QLSV.Core.LINQ.SqlBulkCopy.sp_checkData(String storename, String tbType, DataTable table) in d:\New\QLSV\QLSV\QLSV.Core\LINQ\sqlBulkCopy.cs:line 118
+   at QLSV.Frm.FrmUserControl.Frm_108_ChonSinhVien.Napdulieu() in d:\New\QLSV\QLSV\QLSV.Frm\FrmUserControl\Frm_108_ChonSinhVien.cs:line 169
+System.Threading.Tasks.Task TdsExecuteRPC(System.Data.SqlClient._SqlRPC[], Int32, Boolean, System.Data.Sql.SqlNotificationRequest, System.Data.SqlClient.TdsParserStateObject, Boolean, Boolean, System.Threading.Tasks.TaskCompletionSource`1[System.Object], Int32, Int32)
+
+10:04:28 There are not enough fields in the Structured type.  Structured types must have at least one field.
+System.Data
+   at System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at QLSV.Core.LINQ.SqlBulkCopy.sp_checkData(String storename, String tbType, DataTable table) in d:\New\QLSV\QLSV\QLSV.Core\LINQ\sqlBulkCopy.cs:line 118
+   at QLSV.Frm.FrmUserControl.Frm_108_ChonSinhVien.Napdulieu() in d:\New\QLSV\QLSV\QLSV.Frm\FrmUserControl\Frm_108_ChonSinhVien.cs:line 169
+System.Threading.Tasks.Task TdsExecuteRPC(System.Data.SqlClient._SqlRPC[], Int32, Boolean, System.Data.Sql.SqlNotificationRequest, System.Data.SqlClient.TdsParserStateObject, Boolean, Boolean, System.Threading.Tasks.TaskCompletionSource`1[System.Object], Int32, Int32)
+
