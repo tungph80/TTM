@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<section id="content">
+    <section class="hbox stretch">
+        <aside>
+            <section class="vbox">
+                <header class="header bg-white b-b clearfix">
+                    <div class="row m-t-sm">
+                        <div class="col-sm-10 m-b-xs">
+                            <form id="gridSearch" class="form-inline" role="form">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-default" title="Filter" data-toggle="dropdown"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#showAll" data-event="showAll" data-grid="#mygird"><i class="fa fa-check icon-muted fa-fw"></i>Hiển thị</a></li>
+                                        <li><a href="#hideAll" data-event="hideAll" data-grid="#mygird"><i class="fa fa-times icon-muted fa-fw"></i>Ẩn</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#deleteAll" data-event="deleteAll" data-grid="#mygird"><i class="fa fa-trash-o icon-muted fa-fw"></i><span class="text">Xóa</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Keyword">Từ khóa tìm kiếm</label>
+                                    <input type="text" class="form-control input-sm" id="Keyword" name="Keyword" placeholder="Từ khóa tìm kiếm">
+                                </div>
+                                <button name="submit.Search" type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                            </form>
+                        </div>
+                        <div class="col-sm-2 m-b-xs text-right">
+                            <a class="btn btn-sm btn-primary" href="javascrip:;" data-id="1" id="btn_add"><i class="fa fa-plus text"></i>Thêm mới</a>
+                        </div>
+                    </div>
+                </header>
+                <section id="NewsGriditems" class="">
+                </section>
+            </section>
+        </aside>
+    </section>
+    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+</section>
+<script type="text/javascript">
+    $(document).ready(function () {
+        initAjaxLoad();
+        $("#mygird .gridView tr").not("first").click(function () {
+            $("#mygird .gridView tr").removeClass("hightlight");
+            $(this).addClass("hightlight");
+        });
+
+        $("#mygird .gridView th a").each(function (index) {
+            $(this).click(function () {
+
+                alert($(this).attr("href"));
+            });
+        });
+        $("#rowpage .left a").each(function () {
+            $(this).click(function () {
+                debugger;
+                var link = $(this).attr("href").replace("#", "?");
+                var url = "SinhVien/indexpage" + link;
+                $.get(url, function (data) {
+                    alert(data);
+                });
+            });
+        });
+
+        $('#mygird .checkAll').click(function () {
+            debugger;
+            var selectQuery = "#mygird input[type='checkbox']";
+            if ($(this).val() != '')
+                selectQuery = "#mygird" + " #" + $(this).val() + " input[type='checkbox']";
+            $(selectQuery).attr('checked');
+        });
+        var i = 1;
+        $("#btn_add").click(function (e) {
+            e.preventDefault();
+            i += 1;
+            window.location.href ='#page1&type=Active&idActive='+i;
+        });
+
+    });
+
+    function initAjaxLoad(callback) {
+        $.address.init().change(function (event) {
+            $.post("SinhVien/ListItems", function (data) {
+                $("#NewsGriditems").html(data);
+            }).complete(function () {
+                if (callback && typeof (callback) === "function") {
+                    callback();
+                }
+            });
+        });
+    }
+</script>

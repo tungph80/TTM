@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=AREAS_005CADMIN_005CVIEWS_005CSHARED_005CJS_005CSLIMSCROLL_005CJQUERY_002ESLIMSCROLL_002EMIN_002EJS/@EntryIndexedValue">Areas\Admin\Views\Shared\js\slimscroll\jquery.slimscroll.min.js</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=CONTENT_005CIMAGES/@EntryIndexedValue">Content\Images</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=VIEWS_005CLOGIN_005CIMAGES_005CAVATAR_005F2X_002EPNG/@EntryIndexedValue">Views\Login\Images\avatar_2x.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/MappedPaths/=CONTENT_005CADMIN_005CIMAGES_005CSTATISTICS_002EPNG/@EntryIndexedValue"></s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=AREAS_005CADMIN_005CVIEWS_005CSHARED_005CJS_005CSLIMSCROLL_005CJQUERY_002ESLIMSCROLL_002EMIN_002EJS/@EntryIndexedValue">Areas\Admin\Views\Shared\js\slimscroll\jquery.slimscroll.min.js</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=CONTENT_005CADMIN_005CIMAGES_005CSTATISTICS_002EPNG/@EntryIndexedValue">Content\Admin\images\statistics.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=CONTENT_005CIMAGES/@EntryIndexedValue">Content\Images</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=VIEWS_005CLOGIN_005CIMAGES_005CAVATAR_005F2X_002EPNG/@EntryIndexedValue">Views\Login\Images\avatar_2x.png</s:String></wpf:ResourceDictionary>

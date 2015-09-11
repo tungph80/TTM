@@ -1,0 +1,14 @@
+﻿@helper ActionEdit(object id, string title)
+{
+    <a href="#@id" class="btn btn-sm btn-default" data-event="edit" title="Chỉnh sửa: @title"><i class="fa fa-edit" style="color: #04A827;"></i></a>
+}
+
+@helper ActionView(object id, string title)
+{
+    <a href="#@id" class="btn btn-sm btn-default" data-event="view" title="Xem nhanh: @title"><i class="fa fa-eye"></i></a>
+}
+
+@helper ActionDelete(object id, string title)
+{ 
+    <a href="#@id" class="btn btn-sm btn-default" data-event="delete" title="Xóa: @title"><i class="fa fa-trash-o" style="color: red;"></i></a> 
+}

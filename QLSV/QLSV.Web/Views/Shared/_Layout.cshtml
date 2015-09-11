@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Skin/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/Skin/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/zontal-admin/assets/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="/Skin/css/app.css" type="text/css" />
+    <link href="~/Content/zontal-admin/assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
     @RenderBody()
-
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
+    <script src="~/Skin/js/bootstrap.js"></script>
 </body>
 </html>

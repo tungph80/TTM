@@ -168,18 +168,18 @@
 
 	// portlet
 	$('.portlet').each(function(){
-		$(".portlet").sortable({
-	        connectWith: '.portlet',
-            iframeFix: false,
-            items: '.portlet-item',
-            opacity: 0.8,
-            helper: 'original',
-            revert: true,
-            forceHelperSize: true,
-            placeholder: 'sortable-box-placeholder round-all',
-            forcePlaceholderSize: true,
-            tolerance: 'pointer'
-	    });
+		//$(".portlet").sortable({
+	    //    connectWith: '.portlet',
+        //    iframeFix: false,
+        //    items: '.portlet-item',
+        //    opacity: 0.8,
+        //    helper: 'original',
+        //    revert: true,
+        //    forceHelperSize: true,
+        //    placeholder: 'sortable-box-placeholder round-all',
+        //    forcePlaceholderSize: true,
+        //    tolerance: 'pointer'
+	    //});
     });
 
 	// docs

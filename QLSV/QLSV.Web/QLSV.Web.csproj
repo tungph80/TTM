@@ -39,6 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EduSoft.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EduSoft.Utils.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -124,13 +128,57 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SinhVienController.cs" />
+    <Compile Include="Common\Util.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin\common.css" />
+    <Content Include="Content\Admin\GridView.css" />
+    <Content Include="Content\Admin\GridView.js" />
+    <Content Include="Content\Admin\gridview\accessories.png" />
+    <Content Include="Content\Admin\gridview\act_filedelete.png" />
+    <Content Include="Content\Admin\gridview\add.gif" />
+    <Content Include="Content\Admin\gridview\addquestion.png" />
+    <Content Include="Content\Admin\gridview\approved.gif" />
+    <Content Include="Content\Admin\gridview\attribute.png" />
+    <Content Include="Content\Admin\gridview\delete.gif" />
+    <Content Include="Content\Admin\gridview\discount-product-icon.png" />
+    <Content Include="Content\Admin\gridview\down.png" />
+    <Content Include="Content\Admin\gridview\download.gif" />
+    <Content Include="Content\Admin\gridview\edit.gif" />
+    <Content Include="Content\Admin\gridview\eraser.png" />
+    <Content Include="Content\Admin\gridview\gallery.png" />
+    <Content Include="Content\Admin\gridview\grid-bg.png" />
+    <Content Include="Content\Admin\gridview\hide.gif" />
+    <Content Include="Content\Admin\gridview\history-icon.png" />
+    <Content Include="Content\Admin\gridview\hot.gif" />
+    <Content Include="Content\Admin\gridview\icon-addrole.png" />
+    <Content Include="Content\Admin\gridview\icon-variant.png" />
+    <Content Include="Content\Admin\gridview\icon.png" />
+    <Content Include="Content\Admin\gridview\more.png" />
+    <Content Include="Content\Admin\gridview\pending.gif" />
+    <Content Include="Content\Admin\gridview\point-icon.png" />
+    <Content Include="Content\Admin\gridview\preview.png" />
+    <Content Include="Content\Admin\gridview\question.png" />
+    <Content Include="Content\Admin\gridview\reduce.png" />
+    <Content Include="Content\Admin\gridview\refproduct.png" />
+    <Content Include="Content\Admin\gridview\reject.gif" />
+    <Content Include="Content\Admin\gridview\reply.gif" />
+    <Content Include="Content\Admin\gridview\report.gif" />
+    <Content Include="Content\Admin\gridview\save.png" />
+    <Content Include="Content\Admin\gridview\show.gif" />
+    <Content Include="Content\Admin\gridview\sort.gif" />
+    <Content Include="Content\Admin\gridview\up.gif" />
+    <Content Include="Content\Admin\gridview\up.png" />
+    <Content Include="Content\Admin\gridview\view.gif" />
+    <Content Include="Content\Admin\statistics.png" />
+    <Content Include="Content\js\jquery.clock.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -185,17 +233,49 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\zontal-admin\assets\css\bootstrap.css" />
+    <Content Include="Content\zontal-admin\assets\css\font-awesome.css" />
+    <Content Include="Content\zontal-admin\assets\css\style.css" />
+    <Content Include="Content\zontal-admin\assets\img\64-64.jpg" />
+    <Content Include="Content\zontal-admin\assets\img\logo.png" />
+    <Content Include="Content\zontal-admin\assets\js\bootstrap.js" />
+    <Content Include="Content\zontal-admin\assets\js\jquery-1.11.1.js" />
+    <Content Include="Content\zontal-admin\blank.html" />
+    <Content Include="Content\zontal-admin\forms.html" />
+    <Content Include="Content\zontal-admin\index.html" />
+    <Content Include="Content\zontal-admin\login.html" />
+    <Content Include="Content\zontal-admin\table.html" />
+    <Content Include="Content\zontal-admin\ui.html" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\SinhVien\Index.cshtml" />
+    <Content Include="App_Code\Grid.cshtml" />
+    <Content Include="Areas\Admin\Views\SinhVien\ListItems.cshtml" />
+    <Content Include="Content\zontal-admin\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\zontal-admin\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\zontal-admin\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\zontal-admin\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\zontal-admin\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\zontal-admin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\avatar_2x.png" />
+    <Content Include="Images\loading.gif" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.address-1.4.min.js" />
+    <Content Include="Content\js\jquery.address-1.6.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -439,6 +519,13 @@
     <Content Include="Skin\less\less.php" />
     <Content Include="Skin\less\lessc.inc.php" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutAnonymous.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Skin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Skin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Skin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Skin\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

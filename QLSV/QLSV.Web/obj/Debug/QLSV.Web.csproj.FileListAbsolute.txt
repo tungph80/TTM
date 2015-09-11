@@ -27,3 +27,4 @@ D:\TTMWeb\QLSV\QLSV.Web\bin\System.Web.WebPages.Deployment.xml
 D:\TTMWeb\QLSV\QLSV.Web\bin\System.Web.WebPages.Razor.xml
 D:\TTMWeb\QLSV\QLSV.Web\obj\Debug\QLSV.Web.dll
 D:\TTMWeb\QLSV\QLSV.Web\obj\Debug\QLSV.Web.pdb
+D:\TTMWeb\QLSV\QLSV.Web\obj\Debug\QLSV.Web.csprojResolveAssemblyReference.cache
