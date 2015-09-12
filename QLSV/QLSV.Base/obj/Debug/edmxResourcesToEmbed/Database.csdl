@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Database" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DatabaseContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BAILAMs" EntityType="Database.BAILAM" />
+    <EntitySet Name="DAPANs" EntityType="Database.DAPAN" />
+    <EntitySet Name="DIEMTHIs" EntityType="Database.DIEMTHI" />
+    <EntitySet Name="KHOAs" EntityType="Database.KHOA" />
+    <EntitySet Name="KT_PHONG" EntityType="Database.KT_PHONG" />
+    <EntitySet Name="KYTHIs" EntityType="Database.KYTHI" />
+    <EntitySet Name="LOPs" EntityType="Database.LOP" />
+    <EntitySet Name="NAMHOCs" EntityType="Database.NAMHOC" />
+    <EntitySet Name="PHONGTHIs" EntityType="Database.PHONGTHI" />
+    <EntitySet Name="SINHVIENs" EntityType="Database.SINHVIEN" />
+    <EntitySet Name="TAIKHOANs" EntityType="Database.TAIKHOAN" />
+    <EntitySet Name="XEPPHONGs" EntityType="Database.XEPPHONG" />
+    <AssociationSet Name="FK_BaiLam_KyThi" Association="Database.FK_BaiLam_KyThi">
+      <End Role="KYTHI" EntitySet="KYTHIs" />
+      <End Role="BAILAM" EntitySet="BAILAMs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DAPAN_KYTHI" Association="Database.FK_DAPAN_KYTHI">
+      <End Role="KYTHI" EntitySet="KYTHIs" />
+      <End Role="DAPAN" EntitySet="DAPANs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIEMTHI_NAMHOC" Association="Database.FK_DIEMTHI_NAMHOC">
+      <End Role="NAMHOC" EntitySet="NAMHOCs" />
+      <End Role="DIEMTHI" EntitySet="DIEMTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThongKe_SinhVien" Association="Database.FK_ThongKe_SinhVien">
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+      <End Role="DIEMTHI" EntitySet="DIEMTHIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lop_Khoa" Association="Database.FK_Lop_Khoa">
+      <End Role="KHOA" EntitySet="KHOAs" />
+      <End Role="LOP" EntitySet="LOPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KT_PHONG_KyThi" Association="Database.FK_KT_PHONG_KyThi">
+      <End Role="KYTHI" EntitySet="KYTHIs" />
+      <End Role="KT_PHONG" EntitySet="KT_PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KT_PHONG_PhongThi" Association="Database.FK_KT_PHONG_PhongThi">
+      <End Role="PHONGTHI" EntitySet="PHONGTHIs" />
+      <End Role="KT_PHONG" EntitySet="KT_PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XepPhong_KyThi" Association="Database.FK_XepPhong_KyThi">
+      <End Role="KYTHI" EntitySet="KYTHIs" />
+      <End Role="XEPPHONG" EntitySet="XEPPHONGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SinhVien_Lop" Association="Database.FK_SinhVien_Lop">
+      <End Role="LOP" EntitySet="LOPs" />
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XepPhong_SinhVien" Association="Database.FK_XepPhong_SinhVien">
+      <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+      <End Role="XEPPHONG" EntitySet="XEPPHONGs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BAILAM">
+    <Key>
+      <PropertyRef Name="IdKyThi" />
+      <PropertyRef Name="MaSV" />
+    </Key>
+    <Property Type="Int32" Name="IdKyThi" Nullable="false" />
+    <Property Type="Int32" Name="MaSV" Nullable="false" />
+    <Property Type="String" Name="MaDe" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="KetQua" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="DiemThi" />
+    <Property Type="String" Name="MaHoiDong" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MaLoCham" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TenFile" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="KYTHI" Relationship="Database.FK_BaiLam_KyThi" FromRole="BAILAM" ToRole="KYTHI" />
+  </EntityType>
+  <EntityType Name="DAPAN">
+    <Key>
+      <PropertyRef Name="IdKyThi" />
+      <PropertyRef Name="MaMon" />
+      <PropertyRef Name="MaDe" />
+      <PropertyRef Name="CauHoi" />
+    </Key>
+    <Property Type="Int32" Name="IdKyThi" Nullable="false" />
+    <Property Type="String" Name="MaMon" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MaDe" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CauHoi" Nullable="false" />
+    <Property Type="String" Name="DapAn1" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="ThangDiem" />
+    <NavigationProperty Name="KYTHI" Relationship="Database.FK_DAPAN_KYTHI" FromRole="DAPAN" ToRole="KYTHI" />
+  </EntityType>
+  <EntityType Name="DIEMTHI">
+    <Key>
+      <PropertyRef Name="MaSV" />
+      <PropertyRef Name="IdNamHoc" />
+      <PropertyRef Name="HocKy" />
+    </Key>
+    <Property Type="Int32" Name="MaSV" Nullable="false" />
+    <Property Type="Int32" Name="IdNamHoc" Nullable="false" />
+    <Property Type="String" Name="HocKy" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="Diem" />
+    <NavigationProperty Name="NAMHOC" Relationship="Database.FK_DIEMTHI_NAMHOC" FromRole="DIEMTHI" ToRole="NAMHOC" />
+    <NavigationProperty Name="SINHVIEN" Relationship="Database.FK_ThongKe_SinhVien" FromRole="DIEMTHI" ToRole="SINHVIEN" />
+  </EntityType>
+  <EntityType Name="KHOA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TenKhoa" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LOPs" Relationship="Database.FK_Lop_Khoa" FromRole="KHOA" ToRole="LOP" />
+  </EntityType>
+  <EntityType Name="KT_PHONG">
+    <Key>
+      <PropertyRef Name="IdPhong" />
+      <PropertyRef Name="IdKyThi" />
+    </Key>
+    <Property Type="Int32" Name="IdPhong" Nullable="false" />
+    <Property Type="Int32" Name="IdKyThi" Nullable="false" />
+    <Property Type="Int32" Name="SiSo" />
+    <NavigationProperty Name="KYTHI" Relationship="Database.FK_KT_PHONG_KyThi" FromRole="KT_PHONG" ToRole="KYTHI" />
+    <NavigationProperty Name="PHONGTHI" Relationship="Database.FK_KT_PHONG_PhongThi" FromRole="KT_PHONG" ToRole="PHONGTHI" />
+  </EntityType>
+  <EntityType Name="KYTHI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="MaKT" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TenKT" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NgayThi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TGLamBai" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TGBatDau" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TGKetThuc" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GhiChu" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="TrangThai" />
+    <NavigationProperty Name="BAILAMs" Relationship="Database.FK_BaiLam_KyThi" FromRole="KYTHI" ToRole="BAILAM" />
+    <NavigationProperty Name="DAPANs" Relationship="Database.FK_DAPAN_KYTHI" FromRole="KYTHI" ToRole="DAPAN" />
+    <NavigationProperty Name="KT_PHONG" Relationship="Database.FK_KT_PHONG_KyThi" FromRole="KYTHI" ToRole="KT_PHONG" />
+    <NavigationProperty Name="XEPPHONGs" Relationship="Database.FK_XepPhong_KyThi" FromRole="KYTHI" ToRole="XEPPHONG" />
+  </EntityType>
+  <EntityType Name="LOP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="MaLop" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="IdKhoa" Nullable="false" />
+    <NavigationProperty Name="KHOA" Relationship="Database.FK_Lop_Khoa" FromRole="LOP" ToRole="KHOA" />
+    <NavigationProperty Name="SINHVIENs" Relationship="Database.FK_SinhVien_Lop" FromRole="LOP" ToRole="SINHVIEN" />
+  </EntityType>
+  <EntityType Name="NAMHOC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NamHoc1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DIEMTHIs" Relationship="Database.FK_DIEMTHI_NAMHOC" FromRole="NAMHOC" ToRole="DIEMTHI" />
+  </EntityType>
+  <EntityType Name="PHONGTHI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TenPhong" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SucChua" Nullable="false" />
+    <Property Type="String" Name="GhiChu" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KT_PHONG" Relationship="Database.FK_KT_PHONG_PhongThi" FromRole="PHONGTHI" ToRole="KT_PHONG" />
+  </EntityType>
+  <EntityType Name="SINHVIEN">
+    <Key>
+      <PropertyRef Name="MaSV" />
+    </Key>
+    <Property Type="Int32" Name="MaSV" Nullable="false" />
+    <Property Type="String" Name="HoSV" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TenSV" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NgaySinh" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdLop" Nullable="false" />
+    <NavigationProperty Name="DIEMTHIs" Relationship="Database.FK_ThongKe_SinhVien" FromRole="SINHVIEN" ToRole="DIEMTHI" />
+    <NavigationProperty Name="LOP" Relationship="Database.FK_SinhVien_Lop" FromRole="SINHVIEN" ToRole="LOP" />
+    <NavigationProperty Name="XEPPHONGs" Relationship="Database.FK_XepPhong_SinhVien" FromRole="SINHVIEN" ToRole="XEPPHONG" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TaiKhoan1" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MatKhau" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HoTen" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Quyen" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="XEPPHONG">
+    <Key>
+      <PropertyRef Name="IdSV" />
+      <PropertyRef Name="IdKyThi" />
+    </Key>
+    <Property Type="Int32" Name="IdSV" Nullable="false" />
+    <Property Type="Int32" Name="IdKyThi" Nullable="false" />
+    <Property Type="Int32" Name="IdPhong" />
+    <NavigationProperty Name="KYTHI" Relationship="Database.FK_XepPhong_KyThi" FromRole="XEPPHONG" ToRole="KYTHI" />
+    <NavigationProperty Name="SINHVIEN" Relationship="Database.FK_XepPhong_SinhVien" FromRole="XEPPHONG" ToRole="SINHVIEN" />
+  </EntityType>
+  <Association Name="FK_BaiLam_KyThi">
+    <End Type="Database.KYTHI" Role="KYTHI" Multiplicity="1" />
+    <End Type="Database.BAILAM" Role="BAILAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BAILAM">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DAPAN_KYTHI">
+    <End Type="Database.KYTHI" Role="KYTHI" Multiplicity="1" />
+    <End Type="Database.DAPAN" Role="DAPAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DAPAN">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIEMTHI_NAMHOC">
+    <End Type="Database.NAMHOC" Role="NAMHOC" Multiplicity="1" />
+    <End Type="Database.DIEMTHI" Role="DIEMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NAMHOC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIEMTHI">
+        <PropertyRef Name="IdNamHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThongKe_SinhVien">
+    <End Type="Database.SINHVIEN" Role="SINHVIEN" Multiplicity="1" />
+    <End Type="Database.DIEMTHI" Role="DIEMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="DIEMTHI">
+        <PropertyRef Name="MaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lop_Khoa">
+    <End Type="Database.KHOA" Role="KHOA" Multiplicity="1" />
+    <End Type="Database.LOP" Role="LOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHOA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LOP">
+        <PropertyRef Name="IdKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KT_PHONG_KyThi">
+    <End Type="Database.KYTHI" Role="KYTHI" Multiplicity="1" />
+    <End Type="Database.KT_PHONG" Role="KT_PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KT_PHONG">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KT_PHONG_PhongThi">
+    <End Type="Database.PHONGTHI" Role="PHONGTHI" Multiplicity="1" />
+    <End Type="Database.KT_PHONG" Role="KT_PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONGTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KT_PHONG">
+        <PropertyRef Name="IdPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XepPhong_KyThi">
+    <End Type="Database.KYTHI" Role="KYTHI" Multiplicity="1" />
+    <End Type="Database.XEPPHONG" Role="XEPPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="XEPPHONG">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SinhVien_Lop">
+    <End Type="Database.LOP" Role="LOP" Multiplicity="1" />
+    <End Type="Database.SINHVIEN" Role="SINHVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SINHVIEN">
+        <PropertyRef Name="IdLop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XepPhong_SinhVien">
+    <End Type="Database.SINHVIEN" Role="SINHVIEN" Multiplicity="1" />
+    <End Type="Database.XEPPHONG" Role="XEPPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="XEPPHONG">
+        <PropertyRef Name="IdSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

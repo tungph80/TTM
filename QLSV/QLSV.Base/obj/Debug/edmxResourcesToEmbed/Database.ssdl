@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DatabaseStoreContainer">
+    <EntitySet Name="BAILAM" EntityType="Database.Store.BAILAM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DAPAN" EntityType="Database.Store.DAPAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DIEMTHI" EntityType="Database.Store.DIEMTHI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KHOA" EntityType="Database.Store.KHOA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KT_PHONG" EntityType="Database.Store.KT_PHONG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KYTHI" EntityType="Database.Store.KYTHI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOP" EntityType="Database.Store.LOP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NAMHOC" EntityType="Database.Store.NAMHOC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PHONGTHI" EntityType="Database.Store.PHONGTHI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SINHVIEN" EntityType="Database.Store.SINHVIEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TAIKHOAN" EntityType="Database.Store.TAIKHOAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="XEPPHONG" EntityType="Database.Store.XEPPHONG" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_BaiLam_KyThi" Association="Database.Store.FK_BaiLam_KyThi">
+      <End Role="KYTHI" EntitySet="KYTHI" />
+      <End Role="BAILAM" EntitySet="BAILAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DAPAN_KYTHI" Association="Database.Store.FK_DAPAN_KYTHI">
+      <End Role="KYTHI" EntitySet="KYTHI" />
+      <End Role="DAPAN" EntitySet="DAPAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIEMTHI_NAMHOC" Association="Database.Store.FK_DIEMTHI_NAMHOC">
+      <End Role="NAMHOC" EntitySet="NAMHOC" />
+      <End Role="DIEMTHI" EntitySet="DIEMTHI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KT_PHONG_KyThi" Association="Database.Store.FK_KT_PHONG_KyThi">
+      <End Role="KYTHI" EntitySet="KYTHI" />
+      <End Role="KT_PHONG" EntitySet="KT_PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KT_PHONG_PhongThi" Association="Database.Store.FK_KT_PHONG_PhongThi">
+      <End Role="PHONGTHI" EntitySet="PHONGTHI" />
+      <End Role="KT_PHONG" EntitySet="KT_PHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lop_Khoa" Association="Database.Store.FK_Lop_Khoa">
+      <End Role="KHOA" EntitySet="KHOA" />
+      <End Role="LOP" EntitySet="LOP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SinhVien_Lop" Association="Database.Store.FK_SinhVien_Lop">
+      <End Role="LOP" EntitySet="LOP" />
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ThongKe_SinhVien" Association="Database.Store.FK_ThongKe_SinhVien">
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+      <End Role="DIEMTHI" EntitySet="DIEMTHI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XepPhong_KyThi" Association="Database.Store.FK_XepPhong_KyThi">
+      <End Role="KYTHI" EntitySet="KYTHI" />
+      <End Role="XEPPHONG" EntitySet="XEPPHONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XepPhong_SinhVien" Association="Database.Store.FK_XepPhong_SinhVien">
+      <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+      <End Role="XEPPHONG" EntitySet="XEPPHONG" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BAILAM">
+    <Key>
+      <PropertyRef Name="IdKyThi" />
+      <PropertyRef Name="MaSV" />
+    </Key>
+    <Property Name="IdKyThi" Type="int" Nullable="false" />
+    <Property Name="MaSV" Type="int" Nullable="false" />
+    <Property Name="MaDe" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="KetQua" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="DiemThi" Type="float" />
+    <Property Name="MaHoiDong" Type="varchar" MaxLength="50" />
+    <Property Name="MaLoCham" Type="varchar" MaxLength="50" />
+    <Property Name="TenFile" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DAPAN">
+    <Key>
+      <PropertyRef Name="IdKyThi" />
+      <PropertyRef Name="MaMon" />
+      <PropertyRef Name="MaDe" />
+      <PropertyRef Name="CauHoi" />
+    </Key>
+    <Property Name="IdKyThi" Type="int" Nullable="false" />
+    <Property Name="MaMon" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MaDe" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CauHoi" Type="int" Nullable="false" />
+    <Property Name="DapAn" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="ThangDiem" Type="float" />
+  </EntityType>
+  <EntityType Name="DIEMTHI">
+    <Key>
+      <PropertyRef Name="MaSV" />
+      <PropertyRef Name="IdNamHoc" />
+      <PropertyRef Name="HocKy" />
+    </Key>
+    <Property Name="MaSV" Type="int" Nullable="false" />
+    <Property Name="IdNamHoc" Type="int" Nullable="false" />
+    <Property Name="HocKy" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Diem" Type="float" />
+  </EntityType>
+  <EntityType Name="KHOA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TenKhoa" Type="nvarchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="KT_PHONG">
+    <Key>
+      <PropertyRef Name="IdPhong" />
+      <PropertyRef Name="IdKyThi" />
+    </Key>
+    <Property Name="IdPhong" Type="int" Nullable="false" />
+    <Property Name="IdKyThi" Type="int" Nullable="false" />
+    <Property Name="SiSo" Type="int" />
+  </EntityType>
+  <EntityType Name="KYTHI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaKT" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="TenKT" Type="nvarchar" MaxLength="255" />
+    <Property Name="NgayThi" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TGLamBai" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TGBatDau" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="TGKetThuc" Type="nvarchar" MaxLength="255" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="LOP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaLop" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="IdKhoa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NAMHOC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NamHoc" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PHONGTHI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TenPhong" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="SucChua" Type="int" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SINHVIEN">
+    <Key>
+      <PropertyRef Name="MaSV" />
+    </Key>
+    <Property Name="MaSV" Type="int" Nullable="false" />
+    <Property Name="HoSV" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="TenSV" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="NgaySinh" Type="varchar" MaxLength="50" />
+    <Property Name="IdLop" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TaiKhoan" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="255" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="255" />
+    <Property Name="Quyen" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="XEPPHONG">
+    <Key>
+      <PropertyRef Name="IdSV" />
+      <PropertyRef Name="IdKyThi" />
+    </Key>
+    <Property Name="IdSV" Type="int" Nullable="false" />
+    <Property Name="IdKyThi" Type="int" Nullable="false" />
+    <Property Name="IdPhong" Type="int" />
+  </EntityType>
+  <Association Name="FK_BaiLam_KyThi">
+    <End Role="KYTHI" Type="Database.Store.KYTHI" Multiplicity="1" />
+    <End Role="BAILAM" Type="Database.Store.BAILAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BAILAM">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DAPAN_KYTHI">
+    <End Role="KYTHI" Type="Database.Store.KYTHI" Multiplicity="1" />
+    <End Role="DAPAN" Type="Database.Store.DAPAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DAPAN">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIEMTHI_NAMHOC">
+    <End Role="NAMHOC" Type="Database.Store.NAMHOC" Multiplicity="1" />
+    <End Role="DIEMTHI" Type="Database.Store.DIEMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NAMHOC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DIEMTHI">
+        <PropertyRef Name="IdNamHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KT_PHONG_KyThi">
+    <End Role="KYTHI" Type="Database.Store.KYTHI" Multiplicity="1" />
+    <End Role="KT_PHONG" Type="Database.Store.KT_PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KT_PHONG">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KT_PHONG_PhongThi">
+    <End Role="PHONGTHI" Type="Database.Store.PHONGTHI" Multiplicity="1" />
+    <End Role="KT_PHONG" Type="Database.Store.KT_PHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONGTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KT_PHONG">
+        <PropertyRef Name="IdPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lop_Khoa">
+    <End Role="KHOA" Type="Database.Store.KHOA" Multiplicity="1" />
+    <End Role="LOP" Type="Database.Store.LOP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHOA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LOP">
+        <PropertyRef Name="IdKhoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SinhVien_Lop">
+    <End Role="LOP" Type="Database.Store.LOP" Multiplicity="1" />
+    <End Role="SINHVIEN" Type="Database.Store.SINHVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOP">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SINHVIEN">
+        <PropertyRef Name="IdLop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ThongKe_SinhVien">
+    <End Role="SINHVIEN" Type="Database.Store.SINHVIEN" Multiplicity="1" />
+    <End Role="DIEMTHI" Type="Database.Store.DIEMTHI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="DIEMTHI">
+        <PropertyRef Name="MaSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XepPhong_KyThi">
+    <End Role="KYTHI" Type="Database.Store.KYTHI" Multiplicity="1" />
+    <End Role="XEPPHONG" Type="Database.Store.XEPPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KYTHI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="XEPPHONG">
+        <PropertyRef Name="IdKyThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XepPhong_SinhVien">
+    <End Role="SINHVIEN" Type="Database.Store.SINHVIEN" Multiplicity="1" />
+    <End Role="XEPPHONG" Type="Database.Store.XEPPHONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SINHVIEN">
+        <PropertyRef Name="MaSV" />
+      </Principal>
+      <Dependent Role="XEPPHONG">
+        <PropertyRef Name="IdSV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+      warning 6005: The function 'sp_CheckLOP' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_CheckLOP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_CheckSV' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_CheckSV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_InsertKTPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InsertKTPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_InsertLop' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InsertLop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_InsertPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InsertPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_InsertSV' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InsertSV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_InsertXepPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_InsertXepPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_Ud_XepPhong_KTPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_Ud_XepPhong_KTPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_UpdateKhoas' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_UpdateKhoas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_UpdateKTPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_UpdateKTPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_UpdatePhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_UpdatePhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      Errors Found During Generation:
+      warning 6005: The function 'sp_UpdateXepPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
+      
+      <Function Name="sp_UpdateXepPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />-->
+</Schema>

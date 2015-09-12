@@ -44,6 +44,9 @@
       <HintPath>bin\EduSoft.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QLSV.Base">
+      <HintPath>..\QLSV.Base\bin\Debug\QLSV.Base.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -135,6 +138,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Aspuser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +238,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\zontal-admin\assets\css\bootstrap.css" />
+    <Content Include="Content\css.css" />
     <Content Include="Content\zontal-admin\assets\css\font-awesome.css" />
     <Content Include="Content\zontal-admin\assets\css\style.css" />
     <Content Include="Content\zontal-admin\assets\img\64-64.jpg" />
@@ -268,6 +273,8 @@
     <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\avatar_2x.png" />
+    <Content Include="Images\banner_Dhxd.jpg" />
+    <Content Include="Images\DHXD.jpg" />
     <Content Include="Images\loading.gif" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -530,7 +537,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

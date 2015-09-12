@@ -9,6 +9,8 @@ namespace QLSV.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("login", "dang-nhap", new { controller = "Login", action = "Index" }
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

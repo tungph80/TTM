@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using QLSV.Base;
 
 namespace QLSV.Areas.Admin.Controllers
 {
@@ -9,7 +11,12 @@ namespace QLSV.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                ViewBag.name = User.Identity.Name.Split('|')[0];
+                return View();
+            }
+            return Redirect("/dang-nhap");
         }
         
         public ActionResult Login()

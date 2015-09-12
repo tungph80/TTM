@@ -1,25 +1,4 @@
-﻿
-/*=============================================================
-    Authour URL: www.designbootstrap.com
-    
-    http://www.designbootstrap.com/
-
-    License: MIT
-
-    http://opensource.org/licenses/MIT
-
-    100% Free To use For Personal And Commercial Use.
-
-    IN EXCHANGE JUST TELL PEOPLE ABOUT THIS WEBSITE
-   
-========================================================  */
-
-
-/* =============================================================
-   GENERAL STYLES
- ============================================================ */
-
-@import url(http://fonts.googleapis.com/css?family=Roboto); /* FREE GOOGLE FONT */
+﻿@import url(http://fonts.googleapis.com/css?family=Roboto); /* FREE GOOGLE FONT */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -35,7 +14,6 @@ body {
 .content-wrapper {
     margin-top: 40px;
     min-height: 600px;
-    padding-bottom: 60px;
 }
 
 .page-head-line {
@@ -60,30 +38,24 @@ body {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
 }
+
 .login-icon {
     height: 60px;
-width: 60px;
-padding: 13px;
-border-radius: 50%;
-font-size: 30px;
-margin-bottom: 20px;
-color: #fff;
-text-align: center;
-cursor:pointer;
-background-color:#F0677C;
--webkit-border-radius:50%;
-    -moz-border-radius:50%;
+    width: 60px;
+    padding: 13px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    background-color: #F0677C;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
 }
 /* =============================================================
    HEADER SECTION STYLES
  ============================================================ */
-header {
-    background-color: #F0677C;
-    color: #fff;
-    padding: 10px;
-    text-align: right;
-}
-
 
 /* =============================================================
    LOGO SECTION STYLES
@@ -126,7 +98,7 @@ header {
         padding: 10px;
     }
 
-    .user-settings-wrapper .nav > li > a:hover,.user-settings-wrapper .nav > li > a:focus {
+    .user-settings-wrapper .nav > li > a:hover, .user-settings-wrapper .nav > li > a:focus {
         text-decoration: none;
         background-color: #C36464!important;
     }
@@ -166,17 +138,18 @@ header {
     font-weight: 500;
     padding: 10px 10px 10px 10px;
     text-transform: uppercase;
+    font-size: 14px;
 }
 
 .menu-top-active {
     background-color: #C36464;
 }
 
-.menu-section .nav > li > a:hover,.menu-section .nav > li > a:focus {
+.menu-section .nav > li > a:hover, .menu-section .nav > li > a:focus {
     background-color: #F0677C!important;
 }
 
-.menu-section .dropdown-menu > li > a:hover,.menu-section .dropdown-menu > li > a:focus {
+.menu-section .dropdown-menu > li > a:hover, .menu-section .dropdown-menu > li > a:focus {
     background-color: #F0677C!important;
 }
 
@@ -236,8 +209,8 @@ footer {
     border: 2px solid #fff;
     padding: 20px;
     border-radius: 50%;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     font-size: 30px;
     margin-bottom: 20px;
     color: #fff;
@@ -311,4 +284,66 @@ footer {
 
 .btn-google {
     background-color: #c32f10;
+}
+
+fieldset.forms {
+    background: #fafafa;
+}
+
+    fieldset.forms tr td {
+        padding: 8px 12px;
+        vertical-align: top;
+    }
+
+        fieldset.forms tr td.submit {
+            text-align: center;
+        }
+
+    fieldset.forms input, select, textarea {
+        border: 1px solid #BDBCBC;
+    }
+
+        fieldset.forms input:focus, fieldset.forms select:focus, fieldset.forms textarea:focus {
+            border-color: #666D51;
+        }
+
+    fieldset.forms textarea {
+        display: none;
+    }
+
+    fieldset.forms input[type=text], fieldset.forms select, fieldset.forms textarea {
+        padding: 5px;
+        width: 98%;
+    }
+
+    fieldset.forms select {
+        width: 100%;
+    }
+
+    fieldset.forms input[type=checkbox] {
+        margin: 4px 0px;
+        padding: 0px;
+        width: 15px;
+    }
+
+    fieldset.forms label {
+        text-align: right;
+        vertical-align: top;
+        padding-top: 3px;
+    }
+
+    fieldset.forms .tabledetails tr td {
+        border-bottom: 1px dotted #BDBCBC;
+        padding: 4px 10px;
+    }
+
+        fieldset.forms .tabledetails tr td.label {
+            border-right: 1px dotted #BDBCBC;
+            background: none repeat scroll 0 0 #EFEFEF;
+            color: #666;
+            font-weight: bold !important;
+        }
+
+.menu ul li {
+    margin-left: 5px;
 }

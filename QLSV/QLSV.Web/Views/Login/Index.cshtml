@@ -50,7 +50,7 @@
                     <strong>Sign in to continue</strong>
                 </div>
                 <div class="panel-body">
-                    <form role="form" action="#" method="POST">
+                    <form role="form" action="@Url.Action("Login","Login")" method="POST">
                         <fieldset>
                             <div class="circle-mask" style="">
                                 <canvas id="canvas" class="circle" width="96" height="96"></canvas>
@@ -62,7 +62,7 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-user"></i>
                                             </span>
-                                            <input class="form-control" placeholder="Username" name="loginname" type="text" autofocus>
+                                            <input class="form-control" placeholder="Username" name="Username" type="text" autofocus>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -70,11 +70,11 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-key"></i>
                                             </span>
-                                            <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                            <input class="form-control" placeholder="Password" name="Password" type="password" value="">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" class="btn btn-lg btn-info btn-block" value="Sign in">
+                                        <input type="submit" class="btn btn-lg btn-info btn-block" value="Đăng nhập">
                                     </div>
                                 </div>
                             </div>
