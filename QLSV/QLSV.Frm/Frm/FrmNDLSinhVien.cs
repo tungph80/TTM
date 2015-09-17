@@ -82,11 +82,7 @@ namespace QLSV.Frm.Frm
                 for (var i = startRows; i <= endRows; i++)
                 {
                     _result.Rows.Add(
-                        sheet.GetRow(i).GetCell(0).ToString(),
-                        sheet.GetRow(i).GetCell(1).ToString(),
-                        sheet.GetRow(i).GetCell(2).ToString(),
-                        sheet.GetRow(i).GetCell(3).ToString(),
-                        sheet.GetRow(i).GetCell(4).ToString()
+                        sheet.GetRow(i).GetCell(0).ToString()
                         );
                     
                     upsbLoading.SetPropertyThreadSafe(c => c.Value, (i - startRows + 1) * donvi);
@@ -129,11 +125,7 @@ namespace QLSV.Frm.Frm
                 for (var i = startRows; i <= endRows; i++)
                 {
                     _result.Rows.Add(
-                        oSheet.Cells[i, 1].GetValue<string>(),
-                        oSheet.Cells[i, 2].GetValue<string>(),
-                        oSheet.Cells[i, 3].GetValue<string>(),
-                        oSheet.Cells[i, 4].GetValue<string>(),
-                        oSheet.Cells[i, 5].GetValue<string>()
+                        oSheet.Cells[i, 1].GetValue<string>()
                         );
                    upsbLoading.SetPropertyThreadSafe(c => c.Value, (i - startRows + 1) * donvi);
                 }
