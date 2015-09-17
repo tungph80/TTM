@@ -9,8 +9,12 @@ namespace QLSV.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("login", "dang-nhap", new { controller = "Login", action = "Index" }
-            );
+            routes.MapRoute("login", "dang-nhap", new { controller = "Login", action = "Index" });
+            routes.MapRoute("xemdiem", "xem-diem-thi", new { controller = "Home", action = "Xemdiem" });
+            routes.MapRoute("dangky", "dang-ky-thi", new { controller = "Home", action = "Dangky" });
+            routes.MapRoute("tintuc", "tin-tuc", new { controller = "Home", action = "Tintuc" });
+            routes.MapRoute("hoidap", "hoi-dap", new { controller = "Home", action = "Hoidap" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

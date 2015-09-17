@@ -77,7 +77,8 @@ namespace QLSV.Frm.Frm
                     if (!bool.Parse(row.Cells["Chon"].Text)) continue;
                     tbxp.Rows.Add(row.Cells["MaSV"].Text, _idkythi);
                 }
-                save.Bulk_Insert("XEPPHONG",tbxp);
+                //save.Bulk_Insert("XEPPHONG",tbxp);
+                save.sp_InsertUpdate("sp_InsertXepPhong", "@tbl", tbxp);
                 Invoke((Action)(()=>MessageBox.Show(@"Lưu lại thành công", @"Thông báo")));
                 Invoke((Action)(Close));
             }

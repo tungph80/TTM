@@ -1,0 +1,26 @@
+﻿@model QLSV.Web.Models.Aspuser
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="page-head-line">Xem điểm</h4>
+            </div>
+        </div>
+        <fieldset class="forms">
+            <table class="tabledetails" width="70%">
+                <tr>
+                    <td style="width: 150px;">
+                        <label>Điểm tích lũy</label>
+                    </td>
+                    <td>
+                        @(Model!=null?Model.DiemThi:0)
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>

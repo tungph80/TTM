@@ -44,9 +44,6 @@
       <HintPath>bin\EduSoft.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="QLSV.Base">
-      <HintPath>..\QLSV.Base\bin\Debug\QLSV.Base.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -132,13 +129,19 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\SinhVienController.cs" />
+    <Compile Include="Common\Connect.cs" />
+    <Compile Include="Common\StaticEnum.cs" />
     <Compile Include="Common\Util.cs" />
+    <Compile Include="Common\Webconfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Aspuser.cs" />
+    <Compile Include="Models\DangKy.cs" />
+    <Compile Include="Models\Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -183,6 +186,7 @@
     <Content Include="Content\Admin\gridview\view.gif" />
     <Content Include="Content\Admin\statistics.png" />
     <Content Include="Content\js\jquery.clock.js" />
+    <Content Include="Content\js\style.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -271,6 +275,8 @@
     <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\zontal-admin\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="database.config" />
+    <Content Include="App.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\avatar_2x.png" />
     <Content Include="Images\banner_Dhxd.jpg" />
@@ -533,6 +539,11 @@
     <Content Include="Skin\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Skin\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Skin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Home\xemdiem.cshtml" />
+    <Content Include="Views\Home\Dangky.cshtml" />
+    <Content Include="Views\Home\Tintuc.cshtml" />
+    <Content Include="Views\Home\Hoidap.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -540,6 +551,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLSV.Base\QLSV.Base.csproj">
+      <Project>{7670B292-33C3-49AA-8BF1-430E066F8EFF}</Project>
+      <Name>QLSV.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -557,7 +574,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>1575</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:30434/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

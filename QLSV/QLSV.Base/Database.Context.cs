@@ -12,6 +12,9 @@ namespace QLSV.Base
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class DatabaseContainer : DbContext
     {
@@ -37,5 +40,16 @@ namespace QLSV.Base
         public DbSet<SINHVIEN> SINHVIENs { get; set; }
         public DbSet<TAIKHOAN> TAIKHOANs { get; set; }
         public DbSet<XEPPHONG> XEPPHONGs { get; set; }
+        public DbSet<DangKy> DangKies { get; set; }
+        public DbSet<ChuyenMuc> ChuyenMucs { get; set; }
+    
+        public virtual ObjectResult<sp_MaxSinhVien_Result> sp_MaxSinhVien(Nullable<int> masv)
+        {
+            var masvParameter = masv.HasValue ?
+                new ObjectParameter("masv", masv) :
+                new ObjectParameter("masv", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_MaxSinhVien_Result>("sp_MaxSinhVien", masvParameter);
+        }
     }
 }

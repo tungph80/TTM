@@ -30,3 +30,4 @@ D:\TTMWeb\QLSV\QLSV.Web\obj\Debug\QLSV.Web.pdb
 D:\TTMWeb\QLSV\QLSV.Web\obj\Debug\QLSV.Web.csprojResolveAssemblyReference.cache
 D:\TTMWeb\QLSV\QLSV.Web\bin\QLSV.Base.dll
 D:\TTMWeb\QLSV\QLSV.Web\bin\QLSV.Base.pdb
+D:\TTMWeb\QLSV\QLSV.Web\bin\QLSV.Web.dll.config

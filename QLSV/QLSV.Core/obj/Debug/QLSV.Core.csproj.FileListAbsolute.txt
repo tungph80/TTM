@@ -5,6 +5,5 @@ D:\New\QLSV\QLSV\QLSV.Core\obj\Debug\QLSV.Core.pdb
 D:\New\QLSV\QLSV\QLSV.Core\obj\Debug\QLSV.Core.csprojResolveAssemblyReference.cache
 D:\TTMWeb\QLSV\QLSV.Core\bin\Debug\QLSV.Core.dll
 D:\TTMWeb\QLSV\QLSV.Core\bin\Debug\QLSV.Core.pdb
-D:\TTMWeb\QLSV\QLSV.Core\obj\Debug\QLSV.Core.csprojResolveAssemblyReference.cache
 D:\TTMWeb\QLSV\QLSV.Core\obj\Debug\QLSV.Core.dll
 D:\TTMWeb\QLSV\QLSV.Core\obj\Debug\QLSV.Core.pdb

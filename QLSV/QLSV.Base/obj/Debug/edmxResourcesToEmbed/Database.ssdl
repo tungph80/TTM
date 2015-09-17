@@ -2,6 +2,8 @@
 <Schema Namespace="Database.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="DatabaseStoreContainer">
     <EntitySet Name="BAILAM" EntityType="Database.Store.BAILAM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChuyenMuc" EntityType="Database.Store.ChuyenMuc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DangKy" EntityType="Database.Store.DangKy" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DAPAN" EntityType="Database.Store.DAPAN" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DIEMTHI" EntityType="Database.Store.DIEMTHI" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="KHOA" EntityType="Database.Store.KHOA" store:Type="Tables" Schema="dbo" />
@@ -67,6 +69,25 @@
     <Property Name="MaHoiDong" Type="varchar" MaxLength="50" />
     <Property Name="MaLoCham" Type="varchar" MaxLength="50" />
     <Property Name="TenFile" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ChuyenMuc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Link" Type="varchar" MaxLength="250" />
+    <Property Name="DangKy" Type="bit" />
+  </EntityType>
+  <EntityType Name="DangKy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Masv" Type="int" />
+    <Property Name="KyNangDoc" Type="bit" />
+    <Property Name="KyNangNghe" Type="bit" />
+    <Property Name="DocHieu" Type="bit" />
   </EntityType>
   <EntityType Name="DAPAN">
     <Key>
@@ -296,52 +317,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <!--Errors Found During Generation:
-      warning 6005: The function 'sp_CheckLOP' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_CheckLOP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_CheckSV' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_CheckSV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_InsertKTPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_InsertKTPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_InsertLop' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_InsertLop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_InsertPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_InsertPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_InsertSV' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_InsertSV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_InsertXepPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_InsertXepPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_Ud_XepPhong_KTPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_Ud_XepPhong_KTPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_UpdateKhoas' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_UpdateKhoas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_UpdateKTPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_UpdateKTPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_UpdatePhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_UpdatePhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      Errors Found During Generation:
-      warning 6005: The function 'sp_UpdateXepPhong' has a parameter 'tbl' at parameter index 0 that has a data type 'table type' which is currently not supported for the target .NET Framework version. The function was excluded.
-      
-      <Function Name="sp_UpdateXepPhong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />-->
+  <Function Name="sp_MaxSinhVien" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="masv" Type="int" Mode="In" />
+  </Function>
 </Schema>

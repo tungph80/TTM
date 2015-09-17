@@ -2,7 +2,12 @@
 {
     public class Aspuser
     {
-        public string Username { get; set; }
+        public int Username { get; set; }
+        public double DiemThi { get; set; }
+        public string HoTen { get; set; }
+        public string Lop { get; set; }
+        public string NgaySinh { get; set; }
         public string Password { get; set; }
+        public bool IsDangky { get; set; }
     }
 }

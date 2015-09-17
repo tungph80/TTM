@@ -1,0 +1,75 @@
+﻿@model QLSV.Web.Models.Aspuser
+@{
+    ViewBag.Title = "Đăng ký thi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="page-head-line">Đăng ký thi</h4>
+            </div>
+        </div>
+        @if (Model.IsDangky == false)
+        {
+            <fieldset class="forms">
+                <table class="tabledetails" width="70%">
+                    <tr>
+                        <td>
+                            <label>Chưa đến thời gian đăng ký</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-sm-6">
+                    <section class="panel panel-default">
+                        <div class="panel-body">
+                            <form role="form" id="form-dangky">
+                                @if (Model.DiemThi < 200)
+                                {
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="DocHieu" name="DocHieu" type="checkbox" style="margin-top: 8px; margin-right: 15px;" value="True">
+                                            Kỹ năng đọc hiểu
+                                        </label>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="KyNangDoc" name="KyNangDoc" type="checkbox" style="margin-top: 8px; margin-right: 15px;" value="True">
+                                            Kỹ năng đọc
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="KyNangNghe" name="KyNangNghe" type="checkbox" style="margin-top: 8px; margin-right: 15px;" value="true">
+                                            Kỹ năng nghe
+                                        </label>
+                                    </div>
+                                }
+                                <button type="submit" class="btn btn-sm btn-info">Đăng ký</button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#form-dangky").submit(function (event) {
+            event.preventDefault();
+            $.post("Home/DangKyThi", $("#form-dangky").serialize(), function (data) {
+                alert(data.Message);
+            });
+        });
+    })
+</script>
+>

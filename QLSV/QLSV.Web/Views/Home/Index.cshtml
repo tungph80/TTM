@@ -1,36 +1,11 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model QLSV.Web.Models.Aspuser
+@{
+    ViewBag.Title = "Trang chủ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<header>
-    <div class="content">
-        <img src="~/Images/banner_Dhxd.jpg" width="100%"/>
-    </div>
-</header>
-<!-- LOGO HEADER END-->
-<section class="menu-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="navbar-collapse collapse menu">
-                    <ul id="menu-top" class="nav navbar-nav navbar-right">
-                        <li><a href="/"><i class="fa fa-home"></i></a></li>
-                        <li><a href="/">Trang chủ</a></li>
-                        <li><a href="#xem-diem-thi">Xem điểm</a></li>
-                        <li><a href="#dang-ky-thi">Đăng ký thi</a></li>
-                        <li><a href="#tin-tuc">Tin tức</a></li>
-                        <li><a href="#hoi-dap">Hỏi đáp</a></li>
-                        <li><a href="@Url.Action("Logout","Login")">Thoát</a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
 <!-- MENU SECTION END-->
 <div class="content-wrapper">
-    <div class="container">
+    <div class="container" id="container">
         <div class="row">
             <div class="col-md-12">
                 <h4 class="page-head-line">Thông tin cá nhân</h4>
@@ -42,21 +17,32 @@
                     <td style="width: 150px;">
                         <label>Ma SV</label>
                     </td>
-                    <td>785255
+                    <td>
+                        @Model.Username
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Họ tên</label>
                     </td>
-                    <td>Nguyễn Quang Khánh
+                    <td>
+                        @Model.HoTen
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label>Lớp</label>
                     </td>
-                    <td>55PM
+                    <td>
+                        @Model.Lop
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Ngày sinh</label>
+                    </td>
+                    <td>
+                        @Model.NgaySinh
                     </td>
                 </tr>
             </table>
@@ -64,13 +50,3 @@
     </div>
 </div>
 <!-- CONTENT-WRAPPER SECTION END-->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                &copy; 2015 University of Civil Engineering | By : <a href="#" target="_blank">Nguyễn Quang Khánh 2010 - 2015</a>
-            </div>
-
-        </div>
-    </div>
-</footer>

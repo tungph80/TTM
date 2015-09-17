@@ -1,4 +1,22 @@
 ﻿-- Update khoa
+CREATE TYPE [dbo].[DiemThiType] AS TABLE(
+      [MaSV] [int] NULL,
+      [IdNamHoc] [int] NULL,
+	  [HocKy] [varchar](50) NULL,
+	  [Diem] [float] NULL   
+)
+
+GO
+CREATE PROCEDURE [dbo].[sp_InsertDiemThi]
+	@tbl DiemThiType READONLY
+AS
+BEGIN
+	INSERT INTO DIEMTHI(MaSV,IdNamHoc,HocKy,Diem)
+	SELECT c.MaSV, c.IdNamHoc,c.HocKy,c.Diem
+	FROM @tbl c		
+END
+
+-- Update khoa
 CREATE TYPE [dbo].[KhoaType] AS TABLE(
       [ID] [int] NULL,
       [TenKhoa] [nvarchar](MAX) NULL   

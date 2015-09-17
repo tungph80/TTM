@@ -5,3 +5,4 @@ D:\TTMWeb\QLSV\QLSV.Base\bin\Debug\EntityFramework.dll
 D:\TTMWeb\QLSV\QLSV.Base\bin\Debug\EntityFramework.xml
 D:\TTMWeb\QLSV\QLSV.Base\obj\Debug\QLSV.Base.dll
 D:\TTMWeb\QLSV\QLSV.Base\obj\Debug\QLSV.Base.pdb
+D:\TTMWeb\QLSV\QLSV.Base\obj\Debug\QLSV.Base.csprojResolveAssemblyReference.cache

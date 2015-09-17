@@ -98,7 +98,7 @@
             this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.Size = new System.Drawing.Size(257, 26);
             this.txtMatKhau.TabIndex = 11;
-            this.txtMatKhau.Text = "admin";
+            this.txtMatKhau.Text = "tungph80@@";
             // 
             // shapeContainer2
             // 

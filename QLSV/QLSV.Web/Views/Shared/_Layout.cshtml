@@ -4,14 +4,43 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    @*script*@
     <script src="~/Skin/js/jquery.min.js"></script>
+    <script src="~/Content/js/jquery.address-1.6.min.js"></script>
+    <script src="~/Content/js/style.js"></script>
+    @*CSS*@
     <link rel="stylesheet" href="/Skin/css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="/Content/zontal-admin/assets/css/font-awesome.css" type="text/css" />
     <link rel="stylesheet" href="/Skin/css/app.css" type="text/css" />
     <link href="~/Content/zontal-admin/assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
+        <div class="content" hidden>
+            <img src="~/Images/banner_Dhxd.jpg" width="100%" />
+        </div>
+    </header>
+    <!-- LOGO HEADER END-->
+    <section class="menu-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.Action("Menu","Home")
+                </div>
+            </div>
+        </div>
+    </section>
     @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; 2015 University of Civil Engineering | By : <a href="#" target="_blank">Nguyễn Quang Khánh 2010 - 2015</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
     <script src="~/Skin/js/bootstrap.js"></script>
 </body>
 </html>

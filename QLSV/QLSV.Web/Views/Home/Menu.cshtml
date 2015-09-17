@@ -1,0 +1,11 @@
+﻿@model IEnumerable<QLSV.Base.ChuyenMuc>
+<div class="navbar-collapse collapse" id="menu">
+    <ul id="menu-top" class="nav navbar-nav navbar-right">
+        <li><a href="/"><i class="fa fa-home"></i></a></li>
+        @foreach (var item in Model)
+        {
+            <li><a href="@item.Link">@item.Name</a></li>
+        }
+        <li><a href="@Url.Action("Logout", "Login")">Thoát</a></li>
+    </ul>
+</div>

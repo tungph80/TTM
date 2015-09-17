@@ -129,5 +129,34 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_MaxSinhVien" FunctionName="Database.Store.sp_MaxSinhVien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Database.sp_MaxSinhVien_Result">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DangKies">
+      <EntityTypeMapping TypeName="Database.DangKy">
+        <MappingFragment StoreEntitySet="DangKy">
+          <ScalarProperty Name="DocHieu" ColumnName="DocHieu" />
+          <ScalarProperty Name="KyNangNghe" ColumnName="KyNangNghe" />
+          <ScalarProperty Name="KyNangDoc" ColumnName="KyNangDoc" />
+          <ScalarProperty Name="Masv" ColumnName="Masv" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChuyenMucs">
+      <EntityTypeMapping TypeName="Database.ChuyenMuc">
+        <MappingFragment StoreEntitySet="ChuyenMuc">
+          <ScalarProperty Name="DangKy" ColumnName="DangKy" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

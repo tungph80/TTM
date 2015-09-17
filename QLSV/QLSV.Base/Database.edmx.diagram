@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="25e4c96921e04ece931d39c89c590fb0" Name="Diagram1" >
-        <EntityTypeShape EntityType="Database.BAILAM" Width="1.5" PointX="4.028718734173439" PointY="6.6223283738933167" />
-        <EntityTypeShape EntityType="Database.DAPAN" Width="1.5" PointX="11.850154085015019" PointY="15.965564943834005" />
-        <EntityTypeShape EntityType="Database.DIEMTHI" Width="1.5" PointX="0.87994414236393947" PointY="24.640159201175049" />
-        <EntityTypeShape EntityType="Database.KHOA" Width="1.5" PointX="5.17607020268965" PointY="30.133799239124077" />
-        <EntityTypeShape EntityType="Database.KT_PHONG" Width="1.5" PointX="4.1095187552783266" PointY="22.8851467179531" />
-        <EntityTypeShape EntityType="Database.KYTHI" Width="1.5" PointX="10.220332312500259" PointY="29.030010236906826" />
-        <EntityTypeShape EntityType="Database.LOP" Width="1.5" PointX="6.1662940784200533" PointY="9.13478352554831" />
-        <EntityTypeShape EntityType="Database.NAMHOC" Width="1.5" PointX="4.6254419277540606" PointY="1.4306502795920941" />
-        <EntityTypeShape EntityType="Database.PHONGTHI" Width="1.5" PointX="11.787281708692799" PointY="11.556929250972779" />
-        <EntityTypeShape EntityType="Database.SINHVIEN" Width="1.5" PointX="7.23026047424891" PointY="12.388104355143431" />
-        <EntityTypeShape EntityType="Database.TAIKHOAN" Width="1.5" PointX="8.5484697076252054" PointY="15.935200862556323" />
-        <EntityTypeShape EntityType="Database.XEPPHONG" Width="1.5" PointX="1.1696592556171395" PointY="26.607732040159281" />
+        <EntityTypeShape EntityType="Database.BAILAM" Width="1.5" PointX="10.642094503455841" PointY="1.2336658990167388" />
+        <EntityTypeShape EntityType="Database.DAPAN" Width="1.5" PointX="1.9034198326540273" PointY="21.767042125466766" />
+        <EntityTypeShape EntityType="Database.DIEMTHI" Width="1.5" PointX="7.5407123041994462" PointY="5.1481126272809288" />
+        <EntityTypeShape EntityType="Database.KHOA" Width="1.5" PointX="2.0742868511352159" PointY="20.59322244887856" />
+        <EntityTypeShape EntityType="Database.KT_PHONG" Width="1.5" PointX="11.061394929448792" PointY="3.2719057366586783" />
+        <EntityTypeShape EntityType="Database.KYTHI" Width="1.5" PointX="9.51738273423043" PointY="18.788448640512513" />
+        <EntityTypeShape EntityType="Database.LOP" Width="1.5" PointX="2.9771862993841927" PointY="16.41451675464144" />
+        <EntityTypeShape EntityType="Database.NAMHOC" Width="1.5" PointX="1.6363847300579701" PointY="12.001295393333443" />
+        <EntityTypeShape EntityType="Database.PHONGTHI" Width="1.5" PointX="8.24600102577638" PointY="26.883858693243869" />
+        <EntityTypeShape EntityType="Database.SINHVIEN" Width="1.5" PointX="7.0168097219508194" PointY="30.585525035199488" />
+        <EntityTypeShape EntityType="Database.TAIKHOAN" Width="1.5" PointX="10.3398038755822" PointY="12.791186681385705" />
+        <EntityTypeShape EntityType="Database.XEPPHONG" Width="1.5" PointX="1.86266278934789" PointY="18.136147894959965" />
         <AssociationConnector Association="Database.FK_BaiLam_KyThi" />
         <AssociationConnector Association="Database.FK_DAPAN_KYTHI" />
         <AssociationConnector Association="Database.FK_DIEMTHI_NAMHOC" />
@@ -27,6 +27,8 @@
         <AssociationConnector Association="Database.FK_XepPhong_KyThi" />
         <AssociationConnector Association="Database.FK_SinhVien_Lop" />
         <AssociationConnector Association="Database.FK_XepPhong_SinhVien" />
+        <EntityTypeShape EntityType="Database.DangKy" Width="1.5" PointX="5.612900524219917" PointY="11.246944998971626" />
+        <EntityTypeShape EntityType="Database.ChuyenMuc" Width="1.5" PointX="0.96938411750336362" PointY="23.174568008247096" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

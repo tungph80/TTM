@@ -1021,45 +1021,6 @@ function createCloseMessage(title, message, urlFw) {
     window.location.href = urlFw;
 }
 
-
-function setRolesEdit(status) {
-    if (status)
-        $(".act_edit").css("display", "marker");
-    else
-        $(".act_edit").css("display", "none");
-}
-
-function setRolesDelete(status) {
-    if (status)
-        $(".act_delete").css("display", "marker");
-    else
-        $(".act_delete").css("display", "none");
-}
-
-function setRolesAdd(status) {
-    if (status) {
-        $(".act_add").removeClass("act_add_hidden");
-        $(".act_add").css("display", "marker");
-    }
-    else
-        $(".act_add").css("display", "none");
-}
-
-function setRolesApproved(status) {
-    if (status)
-        $(".act_approved").css("display", "marker");
-    else
-        $(".act_approved").css("display", "none");
-}
-
-
-function setRolesRoles(status) {
-    if (status)
-        $(".act_roles").css("display", "marker");
-    else
-        $(".act_roles").css("display", "none");
-}
-
 function createAutoTag(tagControls, urlRouters) {
     $("#" + tagControls + "_Input").keypress(function (e) {
         if (e.keyCode == 13) {

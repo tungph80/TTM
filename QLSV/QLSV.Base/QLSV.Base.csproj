@@ -49,6 +49,12 @@
     <Compile Include="BAILAM.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
+    <Compile Include="ChuyenMuc.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DangKy.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAPAN.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SINHVIEN.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_MaxSinhVien_Result.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="TAIKHOAN.cs">

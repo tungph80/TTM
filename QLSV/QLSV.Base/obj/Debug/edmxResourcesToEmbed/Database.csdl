@@ -53,6 +53,11 @@
       <End Role="SINHVIEN" EntitySet="SINHVIENs" />
       <End Role="XEPPHONG" EntitySet="XEPPHONGs" />
     </AssociationSet>
+    <FunctionImport Name="sp_MaxSinhVien" ReturnType="Collection(Database.sp_MaxSinhVien_Result)">
+      <Parameter Name="masv" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="DangKies" EntityType="Database.DangKy" />
+    <EntitySet Name="ChuyenMucs" EntityType="Database.ChuyenMuc" />
   </EntityContainer>
   <EntityType Name="BAILAM">
     <Key>
@@ -316,4 +321,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="sp_MaxSinhVien_Result">
+    <Property Type="Int32" Name="MaSV" Nullable="false" />
+    <Property Type="Double" Name="Diem" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="DangKy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Masv" />
+    <Property Type="Boolean" Name="KyNangDoc" />
+    <Property Type="Boolean" Name="KyNangNghe" />
+    <Property Type="Boolean" Name="DocHieu" />
+  </EntityType>
+  <EntityType Name="ChuyenMuc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Link" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="DangKy" />
+  </EntityType>
 </Schema>
