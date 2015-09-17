@@ -17,11 +17,13 @@ namespace QLSV.Frm.Frm
         private readonly bool _multiSheet;
         private Thread _threadLoad;
         private readonly DataTable _result;
-        public FrmNDLSinhVien(DataTable tbTable)
+        private int _t;
+        public FrmNDLSinhVien(DataTable tbTable, int type)
         {
             try
             {
                 InitializeComponent();
+                _t = type;
                 _multiSheet = false;
                 _result = tbTable;
             }
@@ -30,7 +32,7 @@ namespace QLSV.Frm.Frm
                 Log2File.LogExceptionToFile(ex);
             }
         }
-       
+
         private void LoadData(object obj)
         {
             try
@@ -81,10 +83,24 @@ namespace QLSV.Frm.Frm
                 var donvi = (endRows - startRows + 1) == 0 ? maximum : maximum / (endRows - startRows + 1);
                 for (var i = startRows; i <= endRows; i++)
                 {
-                    _result.Rows.Add(
+                    if (_t == 1)
+                    {
+                        _result.Rows.Add(
                         sheet.GetRow(i).GetCell(0).ToString()
                         );
-                    
+                    }
+                    else
+                    {
+                        _result.Rows.Add(
+                        sheet.GetRow(i).GetCell(0).ToString(),
+                        sheet.GetRow(i).GetCell(1).ToString(),
+                        sheet.GetRow(i).GetCell(2).ToString(),
+                        sheet.GetRow(i).GetCell(3).ToString(),
+                        sheet.GetRow(i).GetCell(4).ToString()
+                        );
+                    }
+
+
                     upsbLoading.SetPropertyThreadSafe(c => c.Value, (i - startRows + 1) * donvi);
                 }
                 upsbLoading.SetPropertyThreadSafe(c => c.Value, maximum);
@@ -124,18 +140,32 @@ namespace QLSV.Frm.Frm
                 var donvi = (endRows - startRows + 1) == 0 ? maximum : maximum / (endRows - startRows + 1);
                 for (var i = startRows; i <= endRows; i++)
                 {
-                    _result.Rows.Add(
+                    if (_t == 1)
+                    {
+                        _result.Rows.Add(
                         oSheet.Cells[i, 1].GetValue<string>()
                         );
-                   upsbLoading.SetPropertyThreadSafe(c => c.Value, (i - startRows + 1) * donvi);
+                    }
+                    else
+                    {
+                        _result.Rows.Add(
+                        oSheet.Cells[i, 1].GetValue<string>(),
+                        oSheet.Cells[i, 2].GetValue<string>(),
+                        oSheet.Cells[i, 3].GetValue<string>(),
+                        oSheet.Cells[i, 4].GetValue<string>(),
+                        oSheet.Cells[i, 5].GetValue<string>()
+                       );
+                    }
+
+                    upsbLoading.SetPropertyThreadSafe(c => c.Value, (i - startRows + 1) * donvi);
                 }
                 upsbLoading.SetPropertyThreadSafe(c => c.Value, maximum);
                 ResultValue = _result;
             }
             catch (Exception ex)
             {
-               Log2File.LogExceptionToFile(ex);
-               ResultValue = null;
+                Log2File.LogExceptionToFile(ex);
+                ResultValue = null;
             }
         }
 

@@ -163,7 +163,7 @@ namespace QLSV.Frm.FrmUserControl
         {
             try
             {
-                var frmNapDuLieu = new FrmNDLSinhVien(GetTable());
+                var frmNapDuLieu = new FrmNDLSinhVien(GetTable(),1);
                 frmNapDuLieu.ShowDialog();
                 var resultValue = frmNapDuLieu.ResultValue;
                 var tbsvError = _save.sp_checkData("sp_CheckSV", "@tbl", resultValue);
