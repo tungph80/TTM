@@ -69,3 +69,25 @@ Object name: 'LocalizablePropertyGrid'.
    at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
    at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
    at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+17/09/2015 10:15:49 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+17/09/2015 10:16:51 PM   DEBUG Error compiling scripts PerpetuumSoft.Reporting.Rendering.ScriptException: Exception of type 'PerpetuumSoft.Reporting.Rendering.ScriptException' was thrown.
+   at PerpetuumSoft.Reporting.Rendering.ScriptGenerator.CompileScript()
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.GenerateTemplateScript(Document template, String templateName, List`1 processedTemlates)
+   at PerpetuumSoft.Reporting.Designer.ReportDesigner.CheckScript(Document template)
+17/09/2015 10:17:58 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+17/09/2015 10:18:23 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+17/09/2015 10:18:54 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+17/09/2015 10:20:53 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+17/09/2015 10:21:46 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
