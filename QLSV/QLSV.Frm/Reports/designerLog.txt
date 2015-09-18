@@ -91,3 +91,6 @@ Object name: 'LocalizablePropertyGrid'.
 17/09/2015 10:21:46 PM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
    at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
    at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)
+18/09/2015 11:36:02 AM   DEBUG Cannot connect help2 System.Exception: Cannot create ActiveX component.
+   at Microsoft.VisualBasic.Interaction.CreateObject(String ProgId, String ServerName)
+   at PerpetuumSoft.Reporting.DOM.Design.ModernScriptEditorForm.OnLoad(EventArgs e)

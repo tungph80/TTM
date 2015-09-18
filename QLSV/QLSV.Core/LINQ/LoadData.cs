@@ -146,6 +146,17 @@ namespace QLSV.Core.LINQ
                 {
                     case 1:
                         str =
+                            "SELECT ROW_NUMBER() OVER(ORDER BY  p.TenPhong,s.TenSV) as [STT], " +
+                            "s.MaSV, s.HoSV, s.TenSV, s.NgaySinh, l.MaLop, p.TenPhong, k.TenKhoa, l.IdKhoa, x.IdPhong " +
+                            "FROM SINHVIEN s " +
+                            "join XEPPHONG x on s.MaSV = x.IdSV " +
+                            "join PHONGTHI p on x.IdPhong = p.ID " +
+                            "join LOP l on s.IdLop = l.ID " +
+                            "join KHOA k on l.IdKhoa = k.ID " +
+                            "WHERE x.IdKyThi = " + idKythi + " order by  p.TenPhong, s.TenSV";
+                        break;
+                    case 1111:
+                        str =
                             "SELECT ROW_NUMBER() OVER(ORDER BY  l.MaLop,s.TenSV) as [STT], " +
                             "s.MaSV, s.HoSV, s.TenSV, s.NgaySinh, l.MaLop, p.TenPhong, k.TenKhoa, l.IdKhoa, x.IdPhong " +
                             "FROM SINHVIEN s " +

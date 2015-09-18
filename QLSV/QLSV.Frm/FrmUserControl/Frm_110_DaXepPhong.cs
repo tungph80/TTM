@@ -244,7 +244,7 @@ namespace QLSV.Frm.FrmUserControl
         private void RptLop()
         {
             reportManager1.DataSources.Clear();
-            reportManager1.DataSources.Add("danhsach", dgv_DanhSach.DataSource);
+            reportManager1.DataSources.Add("danhsach", LoadData.Load(1111, _idkythi));
             rptdanhsachlop.FilePath = Application.StartupPath + @"\Reports\danhsachduthilop.rst";
             rptdanhsachlop.GetReportParameter += GetParameter2;
             rptdanhsachlop.Prepare();
